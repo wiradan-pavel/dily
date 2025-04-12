@@ -1,5 +1,11 @@
+@forward 'reset.scss';
+@forward 'fonts.scss';
 @use 'var.scss';
 
 body {
-  background-color: var.$darkGrey;
+  font-family: TTNorms;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 16px;
+  color: var.$darkGrey;
 }
