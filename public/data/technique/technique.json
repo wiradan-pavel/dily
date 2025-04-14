@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "title": "Apple",
+      "href": "/",
+      "links": [
+        {
+          "title": "Iphone",
+          "href": "/",
+          "links": [
+            {
+              "title": "Модели",
+              "href": "/",
+              "links": [
+                {
+                  "title": "Iphone 4",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 5",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 6",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 6s",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 7",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 8",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone X",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 11",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 11 Pro",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 12",
+                  "href": "/"
+                },
+                {
+                  "title": "Iphone 12 Pro",
+                  "href": "/"
+                }
+              ]
+            },
+            {
+              "title": "Неисправности",
+              "href": "/"
+            },
+            {
+              "title": "Услуги сервиса",
+              "href": "/"
+            },
+            {
+              "title": "Адреса ремонта",
+              "href": "/"
+            }
+          ]
+        },
+        {
+          "title": "IPad",
+          "href": "/"
+        },
+        {
+          "title": "Thunderbolt Display",
+          "href": "/"
+        },
+        {
+          "title": "Airpods",
+          "href": "/"
+        },
+        {
+          "title": "Mac Pro",
+          "href": "/"
+        },
+        {
+          "title": "Apple TV",
+          "href": "/"
+        },
+        {
+          "title": "Apple Watch",
+          "href": "/"
+        },
+        {
+          "title": "Macbook",
+          "href": "/"
+        },
+        {
+          "title": "iPod",
+          "href": "/"
+        },
+        {
+          "title": "iMac",
+          "href": "/"
+        }
+      ]
+    },
+    {
+      "title": "Оборудование",
+      "href": "/"
+    },
+    {
+      "title": "Инструменты",
+      "href": "/"
+    },
+    {
+      "title": "Телефоны",
+      "href": "/"
+    },
+    {
+      "title": "Орг техника",
+      "href": "/"
+    },
+    {
+      "title": "Фото и видео",
+      "href": "/"
+    },
+    {
+      "title": "Бытовая техника",
+      "href": "/"
+    },
+    {
+      "title": "Тв, аудио",
+      "href": "/"
+    },
+    {
+      "title": "Мониторы",
+      "href": "/"
+    },
+    {
+      "title": "Моноблоки",
+      "href": "/"
+    },
+    {
+      "title": "Ноутбуки",
+      "href": "/"
+    },
+    {
+      "title": "Планшеты",
+      "href": "/"
+    }
+  ]
+}

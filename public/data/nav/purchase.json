@@ -1,0 +1,14 @@
+{
+  "what_we_are_buy": {
+    "title": "Что мы покупаем",
+    "href": "/"
+  },
+  "adresses_of_purchase": {
+    "title": "Адреса скупок",
+    "href": "/"
+  },
+  "btn_get_price": {
+    "title": "Узнать цену",
+    "href": "/"
+  }
+}

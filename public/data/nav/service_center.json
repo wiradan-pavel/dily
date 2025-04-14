@@ -1,0 +1,14 @@
+{
+  "what_we_are_fix": {
+    "title": "Что мы чиним",
+    "href": "/"
+  },
+  "addresses_of_services": {
+    "title": "Адреса сервисов",
+    "href": "/"
+  },
+  "btn_order_repair": {
+    "title": "Заказать ремонт",
+    "href": "/"
+  }
+}

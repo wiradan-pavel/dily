@@ -1,0 +1,18 @@
+{
+  "bulletin_board": {
+    "title": "Доска объявлений",
+    "href": "/"
+  },
+  "service_center": {
+    "title": "Сервисный центр",
+    "href": "/service-center"
+  },
+  "internet_store": {
+    "title": "Интернет-магазин Dily.ru",
+    "href": "/store"
+  },
+  "purchase": {
+    "title": "Скупка",
+    "href": "/purchase"
+  }
+}

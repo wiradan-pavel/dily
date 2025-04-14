@@ -1,0 +1,10 @@
+{
+  "catalog": {
+    "title": "Каталог товаров",
+    "href": "/"
+  },
+  "delivery_and_payment": {
+    "title": "Доставка и оплата",
+    "href": "/"
+  }
+}
