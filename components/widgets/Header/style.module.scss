@@ -6,4 +6,212 @@
     height: 6px;
     background: linear-gradient(to right, rgba(var.$greenBright, 1), rgba(var.$greenBright, 0));
   }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      padding: 12px 0;
+    }
+
+    &__left,
+    &__right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    &__right {
+      gap: 30px;
+    }
+
+    &__auth__btn {
+      font-size: 14px;
+      line-height: 120%;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__bottom {
+    &__wrapper {
+      background-color: var.$lightGrey;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    &__item {
+      &__link {
+        position: relative;
+        padding: 23px 20px;
+        width: 100%;
+        padding-top: 100%;
+        font-size: 14px;
+        transition: background-color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var.$greenBright;
+          opacity: 0;
+          transition: opacity 0.2s ease-in-out;
+        }
+        &__active {
+          background-color: rgba($color: var.$greenBright, $alpha: 0.3);
+          text-shadow: 0 0 0.25px var.$darkGrey, 0 0 0.25px var.$darkGrey;
+
+          &::before {
+            opacity: 100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bulletin {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+
+  &__right,
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+
+  &__left {
+    gap: 40px;
+  }
+
+  &__nav {
+    &__list {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+
+      &__item {
+        font-size: 14px;
+        line-height: 120%;
+
+        &:hover {
+          color: var.$greenBright;
+        }
+
+        &__active {
+          color: var.$greenBright;
+        }
+
+        &__link {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: color 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__category {
+    position: relative;
+    width: 14px;
+    height: 16px;
+
+    & span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var.$darkGrey;
+      border-radius: 18px;
+      transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: calc(50% - 1.5px);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        opacity: 100;
+        width: 8px;
+      }
+    }
+
+    &__open {
+      & span {
+        background-color: var.$greenBright;
+
+        &:nth-child(1) {
+          transform: translateY(6px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(3) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// svgs
+.bulletin__nav__list__item {
+  & svg rect,
+  & svg path {
+    transition: stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
+  }
+
+  &:hover,
+  &__active {
+    &:nth-child(1) {
+      & svg rect:first-child {
+        stroke: var.$greenBright;
+      }
+      & svg rect ~ rect {
+        fill: var.$greenBright;
+      }
+    }
+
+    &:nth-child(2) {
+      & svg rect:nth-child(3),
+      & svg path:nth-child(1),
+      & svg rect:not(:first-child):not(:last-of-type),
+      & svg path:nth-last-child(4) {
+        stroke: var.$greenBright;
+      }
+
+      & svg path:nth-last-child(3),
+      & svg path:nth-last-child(2),
+      & svg rect:last-of-type {
+        fill: var.$greenBright;
+      }
+    }
+
+    &:nth-child(3) {
+      & svg path:not(:last-child) {
+        stroke: var.$greenBright;
+      }
+    }
+  }
 }

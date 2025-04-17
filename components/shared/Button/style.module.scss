@@ -1,0 +1,41 @@
+@use '../../../app/globalStyles/var';
+
+.btn {
+  position: relative;
+  background-color: #fff;
+  color: var.$greenBright;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:disabled {
+    background-color: var.$mediumGrey;
+  }
+
+  &__green {
+    background-color: var.$greenBright;
+    color: #fff;
+  }
+
+  &__shadow {
+    box-shadow: 1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08);
+  }
+
+  & a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+  }
+}

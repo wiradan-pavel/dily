@@ -198,14 +198,14 @@
   },
   "stores": {
     "title": "Магазины",
-    "href": "/stores"
+    "href": "/"
   },
   "charity": {
     "title": "Благотворительность",
-    "href": "/charity"
+    "href": "/"
   },
   "btn_new_announcement": {
     "title": "Подать объявление",
-    "href": "/new-announcement"
+    "href": "/"
   }
 }

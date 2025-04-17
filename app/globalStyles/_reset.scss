@@ -129,3 +129,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}

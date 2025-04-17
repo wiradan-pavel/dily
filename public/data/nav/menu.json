@@ -5,14 +5,14 @@
   },
   "service_center": {
     "title": "Сервисный центр",
-    "href": "/service-center"
+    "href": "/"
   },
   "internet_store": {
     "title": "Интернет-магазин Dily.ru",
-    "href": "/store"
+    "href": "/"
   },
   "purchase": {
     "title": "Скупка",
-    "href": "/purchase"
+    "href": "/"
   }
 }
