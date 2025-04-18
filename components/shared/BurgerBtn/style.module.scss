@@ -1,0 +1,50 @@
+@use '../../../app/globalStyles/var';
+
+.burger {
+  position: relative;
+  width: 14px;
+  height: 16px;
+
+  & span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var.$darkGrey;
+    border-radius: 18px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: calc(50% - 1.5px);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      opacity: 100;
+      width: 8px;
+    }
+  }
+
+  &__open {
+    & span {
+      background-color: var.$greenBright;
+
+      &:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(3) {
+        opacity: 0;
+      }
+    }
+  }
+}

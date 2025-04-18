@@ -70,6 +70,7 @@ const Header = () => {
               </ul>
             </nav>
           </div>
+
           <div className={styles.header__top__right}>
             <div className={styles.header__top__location}>
               <Location />

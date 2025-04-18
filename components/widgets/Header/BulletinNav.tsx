@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button, SearchForm } from '@/components/shared';
+import { BurgerBtn, Button, SearchForm } from '@/components/shared';
 import {
   AddSvg,
   BulletinNavAnnouncementSvg,
@@ -14,21 +14,11 @@ import styles from './style.module.scss';
 
 const BulletinNav = () => {
   const [activeBulletinPage, setActiveBulletinPage] = useState<0 | 1 | 2>(0);
-  const [openCategoryMenu, setOpenCategoryMenu] = useState(false);
 
   return (
     <div className={styles.bulletin}>
       <div className={styles.bulletin__left}>
-        <button
-          onClick={() => setOpenCategoryMenu(!openCategoryMenu)}
-          className={`${styles.bulletin__category} ${
-            openCategoryMenu ? styles.bulletin__category__open : ''
-          }`}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <BurgerBtn />
         <nav className={styles.bulletin__nav}>
           <ul className={styles.bulletin__nav__list}>
             <li
@@ -78,7 +68,6 @@ const BulletinNav = () => {
       </div>
       <div className={styles.bulletin__right}>
         <SearchForm />
-
         <Button text="Подать объявление" style="green" paddingX={25} paddingY={6} borderRadius={18}>
           <Link href="/" />
           <AddSvg />

@@ -58,4 +58,13 @@
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;
   }
+
+  &:focus-within {
+    border: var.$darkGrey 1px solid;
+
+    & button {
+      background-color: var.$darkGrey;
+      color: #fff;
+    }
+  }
 }
