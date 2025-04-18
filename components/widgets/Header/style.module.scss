@@ -166,3 +166,72 @@
     }
   }
 }
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  &__nav {
+    &__list {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+
+      &__item {
+        font-size: 14px;
+        line-height: 120%;
+        transition: color 0.2s ease-in-out;
+
+        & button,
+        & a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          & svg path {
+            transition: stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
+          }
+        }
+
+        & button {
+          & svg:last-child {
+            transform: rotate(-90deg);
+            transition: transform 0.2s ease-in-out;
+          }
+        }
+
+        &__active,
+        &:hover {
+          color: var.$greenBright;
+
+          & button svg:first-child path:nth-child(1),
+          & button svg:first-child path:nth-child(2) {
+            stroke: var.$greenBright;
+          }
+
+          & button svg:last-child path {
+            fill: var.$greenBright;
+          }
+
+          & a svg path:first-child {
+            stroke: var.$greenBright;
+          }
+        }
+
+        &__open {
+          & button svg:last-child {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+  }
+}

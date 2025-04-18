@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Location, Logo } from '@/components/shared';
 import { PersonSvg } from '@/components/svgs';
 import BulletinNav from './BulletinNav';
+import ServiceCenterNav from './ServiceCenterNav';
 
 import menuData from '@/public/data/nav/menu.json';
 
@@ -86,7 +87,8 @@ const Header = () => {
       </div>
       <div className={styles.header__bottom__wrapper}>
         <div className={`container ${styles.header__bottom}`}>
-          <BulletinNav />
+          {isActiveMenuLink === 0 && <BulletinNav />}
+          {isActiveMenuLink === 1 && <ServiceCenterNav />}
         </div>
       </div>
     </header>
