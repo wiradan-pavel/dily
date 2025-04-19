@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button, SearchForm } from '@/components/shared';
-import { AdressesOfServicesSvg, ArrowDownSvg, WhatWeAreFixSvg } from '@/components/svgs';
+import { AdressesSvg, ArrowDownSvg, WhatWeAreFixSvg } from '@/components/svgs';
 
 import data from '@/public/data/nav/service_center.json';
 
@@ -39,7 +39,7 @@ const ServiceCenterNav = () => {
             onClick={() => setActiveServicePage(1)}
           >
             <Link href={data.addresses_of_services.href}>
-              <AdressesOfServicesSvg />
+              <AdressesSvg />
               {data.addresses_of_services.title}
             </Link>
           </li>
