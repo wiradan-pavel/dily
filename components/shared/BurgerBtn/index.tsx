@@ -6,14 +6,14 @@ const BurgerBtn = () => {
   const [openCategoryMenu, setOpenCategoryMenu] = useState(false);
 
   return (
-    <button
+    <div
       onClick={() => setOpenCategoryMenu(!openCategoryMenu)}
       className={`${styles.burger} ${openCategoryMenu ? styles.burger__open : ''}`}
     >
       <span />
       <span />
       <span />
-    </button>
+    </div>
   );
 };
 

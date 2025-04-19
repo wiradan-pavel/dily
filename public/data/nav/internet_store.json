@@ -6,5 +6,9 @@
   "delivery_and_payment": {
     "title": "Доставка и оплата",
     "href": "/"
+  },
+  "support": {
+    "title": "Поддержка",
+    "href": "/"
   }
 }

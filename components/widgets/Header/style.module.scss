@@ -80,11 +80,13 @@
   }
 }
 
+// bulletin nav
 .bulletin {
   display: flex;
   padding: 10px 0;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 
   &__right,
   &__left {
@@ -167,11 +169,13 @@
   }
 }
 
+// service nav
 .service {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  gap: 10px;
 
   &__nav {
     &__list {
@@ -233,5 +237,105 @@
     display: flex;
     gap: 120px;
     align-items: center;
+  }
+}
+
+.store {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__item {
+      font-size: 14px;
+      line-height: 120%;
+      transition: color 0.2s ease-in-out;
+
+      & a,
+      & button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      & a svg path {
+        transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+      }
+
+      &__active,
+      &:hover {
+        color: var.$greenBright;
+
+        & a svg path {
+          &:nth-child(1) {
+            fill: var.$greenBright;
+          }
+          &:nth-child(3),
+          &:nth-child(5) {
+            stroke: var.$greenBright;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & a {
+      font-size: 14px;
+      line-height: 120%;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var.$greenBright;
+      }
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: fit-content;
+
+      &__item {
+        &:hover {
+          &:last-child {
+            & button svg path:nth-child(2) {
+              stroke: var.$greenBright;
+            }
+            & button svg path:last-child {
+              fill: var.$greenBright;
+            }
+          }
+
+          & button svg path:first-child {
+            stroke: var.$greenBright;
+          }
+        }
+        & button {
+          display: flex;
+          align-items: center;
+
+          & svg path {
+            transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+          }
+        }
+      }
+    }
   }
 }

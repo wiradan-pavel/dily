@@ -5,6 +5,8 @@ import { Location, Logo } from '@/components/shared';
 import { PersonSvg } from '@/components/svgs';
 import BulletinNav from './BulletinNav';
 import ServiceCenterNav from './ServiceCenterNav';
+import InternetStoreNav from './InternetStoreNav';
+import PurchaseNav from './PurchaseNav';
 
 import menuData from '@/public/data/nav/menu.json';
 
@@ -89,6 +91,8 @@ const Header = () => {
         <div className={`container ${styles.header__bottom}`}>
           {isActiveMenuLink === 0 && <BulletinNav />}
           {isActiveMenuLink === 1 && <ServiceCenterNav />}
+          {isActiveMenuLink === 2 && <InternetStoreNav />}
+          {isActiveMenuLink === 3 && <PurchaseNav />}
         </div>
       </div>
     </header>
