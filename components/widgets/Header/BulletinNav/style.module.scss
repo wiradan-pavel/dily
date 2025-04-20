@@ -1,0 +1,70 @@
+@use '../../../../app/globalStyles/var';
+@use '../../../../app/globalStyles/mixins';
+
+.bulletin {
+  @include mixins.flex(center, space-between, 10px);
+  padding: 10px 0;
+
+  &__list {
+    @include mixins.flex(center, flex-start, 40px);
+
+    &__item {
+      font-size: 14px;
+      line-height: 120%;
+      @include mixins.transition(color, 0.2s, ease-in-out);
+
+      &:hover,
+      &__active {
+        color: var.$greenBright;
+      }
+
+      &__link {
+        @include mixins.flex(center, flex-start, 10px);
+      }
+
+      // svgs start
+      &__link svg {
+        & rect,
+        & path {
+          @include mixins.transition(stroke fill, 0.2s, ease-in-out);
+        }
+      }
+
+      &:hover,
+      &__active {
+        &:nth-child(2) a svg {
+          & rect:first-child {
+            stroke: var.$greenBright;
+          }
+          & rect:not(:first-child) {
+            fill: var.$greenBright;
+          }
+        }
+        &:nth-child(3) a svg {
+          & path:first-child,
+          & rect:nth-child(2),
+          & rect:nth-child(4),
+          & path:nth-child(5) {
+            stroke: var.$greenBright;
+          }
+
+          & path:nth-child(6),
+          & path:nth-child(7),
+          & rect:nth-child(8) {
+            fill: var.$greenBright;
+          }
+        }
+        &:nth-child(4) a svg {
+          & path:not(:last-child) {
+            stroke: var.$greenBright;
+          }
+        }
+      }
+      // svgs end
+    }
+  }
+
+  &__actions {
+    @include mixins.flex(center, flex-start, 70px);
+  }
+}

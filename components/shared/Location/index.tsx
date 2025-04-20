@@ -1,4 +1,5 @@
 import { ArrowDownSvg, LocationSvg } from '../../svgs';
+
 import dataLocations from '@/public/data/locations/locations.json';
 
 import styles from './style.module.scss';

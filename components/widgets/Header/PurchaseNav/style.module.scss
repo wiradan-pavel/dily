@@ -1,0 +1,39 @@
+@use '../../../../app/globalStyles/var';
+@use '../../../../app/globalStyles/mixins';
+
+.purchase {
+  @include mixins.flex(center, space-between, 10px);
+  padding: 10px 0;
+
+  &__list {
+    @include mixins.flex(center, flex-start, 40px);
+
+    &__item {
+      font-size: 14px;
+      line-height: 120%;
+      @include mixins.transition(color, 0.2s, ease-in-out);
+
+      &__btn,
+      &__link {
+        @include mixins.flex(center, flex-start, 10px);
+      }
+
+      &__link svg path:first-child {
+        @include mixins.transition(stroke, 0.2s, ease-in-out);
+      }
+
+      &:hover,
+      &__active {
+        color: var.$greenBright;
+
+        & a svg path:first-child {
+          stroke: var.$greenBright;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    @include mixins.flex(center, flex-start, 160px);
+  }
+}

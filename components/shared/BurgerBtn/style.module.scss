@@ -1,4 +1,5 @@
 @use '../../../app/globalStyles/var';
+@use '../../../app/globalStyles/mixins';
 
 .burger {
   position: relative;
@@ -8,13 +9,12 @@
 
   & span {
     position: absolute;
-    left: 0;
     width: 100%;
     height: 3px;
+    left: 0;
     background-color: var.$darkGrey;
     border-radius: 18px;
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
-      opacity 0.2s ease-in-out;
+    @include mixins.transition(background-color transform opacity, 0.2s, ease-in-out);
 
     &:nth-child(1) {
       top: 0;
@@ -25,27 +25,25 @@
     }
 
     &:nth-child(3) {
+      width: 8px;
       bottom: 0;
       opacity: 100;
-      width: 8px;
     }
   }
 
-  &__open {
-    & span {
-      background-color: var.$greenBright;
+  &__open span {
+    background-color: var.$greenBright;
 
-      &:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-      }
+    &:nth-child(1) {
+      @include mixins.transform(translateY(6px) rotate(45deg));
+    }
 
-      &:nth-child(2) {
-        transform: rotate(-45deg);
-      }
+    &:nth-child(2) {
+      @include mixins.transform(rotate(-45deg));
+    }
 
-      &:nth-child(3) {
-        opacity: 0;
-      }
+    &:nth-child(3) {
+      opacity: 0;
     }
   }
 }

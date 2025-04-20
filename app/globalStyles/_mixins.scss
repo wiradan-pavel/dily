@@ -1,0 +1,35 @@
+@mixin flex($align-items, $justify-content, $gap) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: $align-items;
+  -ms-flex-align: $align-items;
+  align-items: $align-items;
+  -webkit-box-pack: $justify-content;
+  -ms-flex-pack: $justify-content;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin transition($property, $duration, $func) {
+  -webkit-transition-property: $property;
+  -o-transition-property: $property;
+  transition-property: $property;
+  -webkit-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-duration: $duration;
+  -webkit-transition-timing-function: $func;
+  -o-transition-timing-function: $func;
+  transition-timing-function: $func;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}

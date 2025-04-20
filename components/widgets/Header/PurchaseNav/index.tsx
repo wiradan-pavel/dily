@@ -21,7 +21,7 @@ const PurchaseNav = () => {
               activePurchasePage === 0 ? styles.purchase__list__item__active : ''
             }`}
           >
-            <button>
+            <button className={styles.purchase__list__item__btn}>
               <BurgerBtn />
               {data.what_we_are_buy.title}
             </button>
@@ -32,7 +32,10 @@ const PurchaseNav = () => {
               activePurchasePage === 1 ? styles.purchase__list__item__active : ''
             }`}
           >
-            <Link href={data.adresses_of_purchase.href}>
+            <Link
+              className={styles.purchase__list__item__link}
+              href={data.adresses_of_purchase.href}
+            >
               <AdressesSvg />
               {data.adresses_of_purchase.title}
             </Link>

@@ -21,7 +21,7 @@ const InternetStoreNav = () => {
               activeStorePage === 0 ? styles.store__list__item__active : ''
             }`}
           >
-            <button>
+            <button className={styles.store__list__item__btn}>
               <BurgerBtn />
               {data.catalog.title}
             </button>
@@ -32,30 +32,32 @@ const InternetStoreNav = () => {
               activeStorePage === 1 ? styles.store__list__item__active : ''
             }`}
           >
-            <Link href={data.delivery_and_payment.href}>
+            <Link className={styles.store__list__item__link} href={data.delivery_and_payment.href}>
               <DeliveryAndPaymentSvg />
               {data.delivery_and_payment.title}
             </Link>
           </li>
         </ul>
       </nav>
-      <div className={styles.store__right}>
+      <div className={styles.store__actions}>
         <SearchForm />
-        <div className={styles.store__btns}>
-          <Link href={data.support.href}>{data.support.title}</Link>
-          <ul className={styles.store__btns__list}>
-            <li className={styles.store__btns__list__item}>
-              <button>
+        <div className={styles.store__actions__btns}>
+          <Link className={styles.store__actions__btns__support} href={data.support.href}>
+            {data.support.title}
+          </Link>
+          <ul className={styles.store__actions__btns__list}>
+            <li className={styles.store__actions__btns__list__item}>
+              <button className={styles.store__actions__btns__list__item__btn}>
                 <CompareSvg />
               </button>
             </li>
-            <li className={styles.store__btns__list__item}>
-              <button>
+            <li className={styles.store__actions__btns__list__item}>
+              <button className={styles.store__actions__btns__list__item__btn}>
                 <LikeSvg />
               </button>
             </li>
-            <li className={styles.store__btns__list__item}>
-              <button>
+            <li className={styles.store__actions__btns__list__item}>
+              <button className={styles.store__actions__btns__list__item__btn}>
                 <CartSvg />
               </button>
             </li>

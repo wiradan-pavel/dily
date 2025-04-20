@@ -1,32 +1,13 @@
 @use '../../../app/globalStyles/var';
+@use '../../../app/globalStyles/mixins';
 
 .form {
+  @include mixins.flex(center, flex-start, 0px);
   width: 300px;
-  display: flex;
-  align-items: center;
   position: relative;
   border-radius: 18px;
   border: transparent 1px solid;
-  transition: border 0.2s ease-in-out;
-
-  &__active {
-    & input {
-      padding-left: 15px;
-    }
-
-    & svg {
-      opacity: 0;
-    }
-  }
-
-  &:hover {
-    border: var.$darkGrey 1px solid;
-
-    & .form__btn {
-      background-color: var.$darkGrey;
-      color: #fff;
-    }
-  }
+  @include mixins.transition(border, 0.2s, ease-in-out);
 
   &__input {
     width: 100%;
@@ -35,11 +16,9 @@
     line-height: 120%;
     background-color: #fff;
     border-radius: 18px 0 0 18px;
-    outline: none;
-    border: none;
     padding: 9px;
     padding-left: 40px;
-    transition: padding-left 0.2s ease-in-out;
+    @include mixins.transition(padding-left, 0.2s, ease-in-out);
   }
 
   &__btn {
@@ -48,7 +27,7 @@
     font-size: 14px;
     line-height: 120%;
     border-radius: 0 18px 18px 0;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    @include mixins.transition(background-color color, 0.2s, ease-in-out);
   }
 
   & svg {
@@ -56,15 +35,26 @@
     top: 10px;
     left: 15px;
     pointer-events: none;
-    transition: opacity 0.2s ease-in-out;
+    @include mixins.transition(opacity, 0.2s, ease-in-out);
   }
 
+  &:hover,
   &:focus-within {
     border: var.$darkGrey 1px solid;
 
     & button {
       background-color: var.$darkGrey;
       color: #fff;
+    }
+  }
+
+  &__active {
+    & input {
+      padding-left: 15px;
+    }
+
+    & svg {
+      opacity: 0;
     }
   }
 }

@@ -109,9 +109,6 @@ export const BulletinNavStoresSvg = () => {
         stroke="#363A45"
         strokeWidth="0.7"
       />
-      <mask id="path-2-inside-1_789_5321" fill="white">
-        <rect x="1.79456" y="2.5957" width="14.1103" height="11.2227" rx="0.636856" />
-      </mask>
       <rect
         x="1.79456"
         y="2.5957"
@@ -127,9 +124,7 @@ export const BulletinNavStoresSvg = () => {
         d="M4.19233 12.2399C3.32446 12.022 3.06824 11.0747 3.06824 10.2569C3.06824 7.29174 3.98018 7.5412 3.94988 5.96864C3.90855 3.85611 4.93346 3.66665 5.31091 3.75822C9.59237 4.83501 12.0004 4.074 12.0004 4.074C13.6534 3.70138 10.3473 7.13701 12.0004 10.6421C12.9151 12.6188 5.6305 12.5999 4.19233 12.2399Z"
         fill="#00C65E"
       />
-      <mask id="path-4-inside-2_789_5321" fill="white">
-        <rect x="1.79456" width="14.1103" height="3.02122" rx="0.636856" />
-      </mask>
+
       <rect
         x="1.79456"
         width="14.1103"
@@ -149,6 +144,12 @@ export const BulletinNavStoresSvg = () => {
       <path d="M12.3044 2.08203H13.0269L13.7493 6.24965H13.0269L12.3044 2.08203Z" fill="#363A45" />
       <path d="M5.39136 2.08203H4.66892L3.94649 6.24965H4.66892L5.39136 2.08203Z" fill="#363A45" />
       <rect x="8.48718" y="2.08203" width="0.722434" height="4.16762" fill="#363A45" />
+      <mask id="path-2-inside-1_789_5321" fill="white">
+        <rect x="1.79456" y="2.5957" width="14.1103" height="11.2227" rx="0.636856" />
+      </mask>
+      <mask id="path-4-inside-2_789_5321" fill="white">
+        <rect x="1.79456" width="14.1103" height="3.02122" rx="0.636856" />
+      </mask>
     </svg>
   );
 };

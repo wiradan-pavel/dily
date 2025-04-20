@@ -1,0 +1,61 @@
+@use '../../../../app/globalStyles/var';
+@use '../../../../app/globalStyles/mixins';
+
+.service {
+  @include mixins.flex(center, space-between, 10px);
+  padding: 10px 0;
+
+  &__list {
+    @include mixins.flex(center, flex-start, 40px);
+
+    &__item {
+      font-size: 14px;
+      line-height: 120%;
+      @include mixins.transition(color, 0.2s, ease-in-out);
+
+      &__btn,
+      &__link {
+        @include mixins.flex(center, flex-start, 10px);
+
+        & svg path {
+          @include mixins.transition(stroke fill, 0.2s, ease-in-out);
+        }
+      }
+
+      &__btn {
+        & svg:last-child {
+          @include mixins.transform(rotate(-90deg));
+          @include mixins.transition(transform, 0.2s, ease-in-out);
+        }
+      }
+
+      &:hover,
+      &__active {
+        color: var.$greenBright;
+
+        & button svg:first-child path:nth-child(1),
+        & button svg:first-child path:nth-child(2) {
+          stroke: var.$greenBright;
+        }
+
+        & button svg:last-child path {
+          fill: var.$greenBright;
+        }
+
+        & a svg path:first-child {
+          stroke: var.$greenBright;
+        }
+      }
+
+      &__open {
+        & button svg:last-child {
+          @include mixins.transform(rotate(0deg));
+        }
+      }
+    }
+  }
+
+  &__actions {
+    @include mixins.flex(center, flex-start, 120px);
+  }
+}

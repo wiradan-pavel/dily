@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button, SearchForm } from '@/components/shared';
@@ -18,34 +19,37 @@ const ServiceCenterNav = () => {
 
   return (
     <div className={styles.service}>
-      <nav className={styles.service__nav}>
-        <ul className={styles.service__nav__list}>
+      <nav>
+        <ul className={styles.service__list}>
           <li
-            className={`${styles.service__nav__list__item} ${
-              activeServicePage === 0 ? styles.service__nav__list__item__active : ''
-            } ${openServiceMenu ? styles.service__nav__list__item__open : ''}`}
+            className={`${styles.service__list__item} ${
+              activeServicePage === 0 ? styles.service__list__item__active : ''
+            } ${openServiceMenu ? styles.service__list__item__open : ''}`}
             onClick={handleOpenMenu}
           >
-            <button>
+            <button className={styles.service__list__item__btn}>
               <WhatWeAreFixSvg />
               {data.what_we_are_fix.title}
               <ArrowDownSvg />
             </button>
           </li>
           <li
-            className={`${styles.service__nav__list__item} ${
-              activeServicePage === 1 ? styles.service__nav__list__item__active : ''
+            className={`${styles.service__list__item} ${
+              activeServicePage === 1 ? styles.service__list__item__active : ''
             }`}
             onClick={() => setActiveServicePage(1)}
           >
-            <Link href={data.addresses_of_services.href}>
+            <Link
+              className={styles.service__list__item__link}
+              href={data.addresses_of_services.href}
+            >
               <AdressesSvg />
               {data.addresses_of_services.title}
             </Link>
           </li>
         </ul>
       </nav>
-      <div className={styles.service__right}>
+      <div className={styles.service__actions}>
         <SearchForm />
         <Button
           text={data.btn_order_repair.title}
