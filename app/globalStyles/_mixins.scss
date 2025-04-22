@@ -33,3 +33,11 @@
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 }
+
+@mixin grid-col($col, $gap) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr $gap 1fr $gap 1fr;
+  grid-template-columns: $col;
+  gap: $gap;
+}

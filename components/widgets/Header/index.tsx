@@ -18,85 +18,88 @@ const Header = () => {
   const [activeMenuLink, setActiveMenuLink] = useState<0 | 1 | 2 | 3>(0);
 
   return (
-    <header>
-      <div className={styles.line} />
-      <div className="container">
-        <div className={styles.main}>
-          <div className={styles.main__content}>
-            <div className={styles.main__content__logo}>
-              <Logo />
-            </div>
-            <nav>
-              <ul className={styles.main__content__list}>
-                <li className={styles.main__content__list__item}>
-                  <Link
-                    className={`${styles.main__content__list__item__link} ${
-                      activeMenuLink === 0 ? styles.main__content__list__item__link__active : ''
-                    }`}
-                    onClick={() => setActiveMenuLink(0)}
-                    href={menuData.bulletin_board.href}
-                  >
-                    {menuData.bulletin_board.title}
-                  </Link>
-                </li>
-                <li className={styles.main__content__list__item}>
-                  <Link
-                    className={`${styles.main__content__list__item__link} ${
-                      activeMenuLink === 1 ? styles.main__content__list__item__link__active : ''
-                    }`}
-                    onClick={() => setActiveMenuLink(1)}
-                    href={menuData.service_center.href}
-                  >
-                    {menuData.service_center.title}
-                  </Link>
-                </li>
-                <li className={styles.main__content__list__item}>
-                  <Link
-                    className={`${styles.main__content__list__item__link} ${
-                      activeMenuLink === 2 ? styles.main__content__list__item__link__active : ''
-                    }`}
-                    onClick={() => setActiveMenuLink(2)}
-                    href={menuData.internet_store.href}
-                  >
-                    {menuData.internet_store.title}
-                  </Link>
-                </li>
-                <li className={styles.main__content__list__item}>
-                  <Link
-                    className={`${styles.main__content__list__item__link} ${
-                      activeMenuLink === 3 ? styles.main__content__list__item__link__active : ''
-                    }`}
-                    onClick={() => setActiveMenuLink(3)}
-                    href={menuData.purchase.href}
-                  >
-                    {menuData.purchase.title}
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div className={styles.main__actions}>
-            <div>
-              <Location />
-            </div>
-            <div className={styles.main__actions__auth}>
-              <button className={styles.main__actions__auth__btn}>
-                <PersonSvg />
-                Вход / регистрация
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.nav}>
+    <>
+      <header>
+        <div className={styles.line} />
         <div className="container">
-          {activeMenuLink === 0 && <BulletinNav />}
-          {activeMenuLink === 1 && <ServiceCenterNav />}
-          {activeMenuLink === 2 && <InternetStoreNav />}
-          {activeMenuLink === 3 && <PurchaseNav />}
+          <div className={styles.main}>
+            <div className={styles.main__content}>
+              <div className={styles.main__content__logo}>
+                <Logo />
+              </div>
+              <nav>
+                <ul className={styles.main__content__list}>
+                  <li className={styles.main__content__list__item}>
+                    <Link
+                      className={`${styles.main__content__list__item__link} ${
+                        activeMenuLink === 0 ? styles.main__content__list__item__link__active : ''
+                      }`}
+                      onClick={() => setActiveMenuLink(0)}
+                      href={menuData.bulletin_board.href}
+                    >
+                      {menuData.bulletin_board.title}
+                    </Link>
+                  </li>
+                  <li className={styles.main__content__list__item}>
+                    <Link
+                      className={`${styles.main__content__list__item__link} ${
+                        activeMenuLink === 1 ? styles.main__content__list__item__link__active : ''
+                      }`}
+                      onClick={() => setActiveMenuLink(1)}
+                      href={menuData.service_center.href}
+                    >
+                      {menuData.service_center.title}
+                    </Link>
+                  </li>
+                  <li className={styles.main__content__list__item}>
+                    <Link
+                      className={`${styles.main__content__list__item__link} ${
+                        activeMenuLink === 2 ? styles.main__content__list__item__link__active : ''
+                      }`}
+                      onClick={() => setActiveMenuLink(2)}
+                      href={menuData.internet_store.href}
+                    >
+                      {menuData.internet_store.title}
+                    </Link>
+                  </li>
+                  <li className={styles.main__content__list__item}>
+                    <Link
+                      className={`${styles.main__content__list__item__link} ${
+                        activeMenuLink === 3 ? styles.main__content__list__item__link__active : ''
+                      }`}
+                      onClick={() => setActiveMenuLink(3)}
+                      href={menuData.purchase.href}
+                    >
+                      {menuData.purchase.title}
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className={styles.main__actions}>
+              <div>
+                <Location />
+              </div>
+              <div className={styles.main__actions__auth}>
+                <button className={styles.main__actions__auth__btn}>
+                  <PersonSvg />
+                  Вход / регистрация
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
+        <div className={styles.nav}>
+          <div className="container">
+            {activeMenuLink === 0 && <BulletinNav />}
+            {activeMenuLink === 1 && <ServiceCenterNav />}
+            {activeMenuLink === 2 && <InternetStoreNav />}
+            {activeMenuLink === 3 && <PurchaseNav />}
+          </div>
+        </div>
+      </header>
+      
+    </>
   );
 };
 

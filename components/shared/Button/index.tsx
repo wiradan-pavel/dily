@@ -18,15 +18,15 @@ const Button = ({
       disabled={disabled}
       onClick={onClick}
       style={{
-        paddingTop: paddingY + 'px',
-        paddingBottom: paddingY + 'px',
-        paddingLeft: paddingX + 'px',
-        paddingRight: paddingX + 'px',
+        paddingTop: paddingY,
+        paddingBottom: paddingY,
+        paddingLeft: paddingX,
+        paddingRight: paddingX,
         borderRadius: borderRadius + 'px',
       }}
       className={`${styles.btn} ${style === 'green' && styles.btn__green} ${
-        isShadow && styles.btn__shadow
-      }`}
+        style === 'white' && styles.btn__white
+      } ${isShadow && styles.btn__shadow}`}
     >
       {text}
       {children}

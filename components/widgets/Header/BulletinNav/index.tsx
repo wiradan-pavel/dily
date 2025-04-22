@@ -69,7 +69,7 @@ const BulletinNav = () => {
       </nav>
       <div className={styles.bulletin__actions}>
         <SearchForm />
-        <Button text="Подать объявление" style="green" paddingX={25} paddingY={6} borderRadius={18}>
+        <Button text="Подать объявление" style="green" paddingX='25px' paddingY='6px' borderRadius={18}>
           <Link href="/" />
           <AddSvg />
         </Button>

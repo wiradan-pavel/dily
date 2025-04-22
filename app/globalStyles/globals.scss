@@ -1,6 +1,7 @@
-@forward 'reset.scss';
-@forward 'fonts.scss';
-@use 'var.scss';
+@forward 'reset';
+@forward 'fonts';
+@use 'var';
+@use 'mixins';
 
 body {
   font-family: TTNorms;
@@ -8,6 +9,20 @@ body {
   line-height: 150%;
   font-size: 16px;
   color: var.$darkGrey;
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.popup-wrapper {
+  position: absolute;
+  top: 0;
+  background-color: rgba($color: var.$darkGrey, $alpha: 0.5);
+  height: 100vh;
+  width: 100vw;
+  @include mixins.flex(center, center, 0px);
 }
 
 .container {
@@ -15,5 +30,3 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-

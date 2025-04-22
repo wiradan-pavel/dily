@@ -47,8 +47,8 @@ const PurchaseNav = () => {
         <Button
           text={data.btn_get_price.title}
           style="green"
-          paddingX={25}
-          paddingY={7}
+          paddingX="25px"
+          paddingY="7px"
           borderRadius={18}
         />
       </div>

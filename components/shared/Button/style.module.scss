@@ -25,6 +25,11 @@
     color: #fff;
   }
 
+  &__white {
+    background-color: #fff;
+    color: var.$greenBright;
+  }
+
   &__shadow {
     @include mixins.box-shadow(1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08));
   }
