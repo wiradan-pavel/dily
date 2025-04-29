@@ -1,18 +1,18 @@
-'use client';
-import { useState } from 'react';
-import Link from 'next/link';
-import { Location, Logo } from '@/components/shared';
-import { PersonSvg } from '@/components/svgs';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { Location, Logo } from "@/components/shared";
+import { PersonSvg } from "@/components/svgs";
 
 // navs
-import BulletinNav from './BulletinNav';
-import ServiceCenterNav from './ServiceCenterNav';
-import InternetStoreNav from './InternetStoreNav';
-import PurchaseNav from './PurchaseNav';
+import BulletinNav from "./BulletinNav";
+import ServiceCenterNav from "./ServiceCenterNav";
+import InternetStoreNav from "./InternetStoreNav";
+import PurchaseNav from "./PurchaseNav";
 
-import menuData from '@/public/data/nav/menu.json';
+import menuData from "@/public/data/nav/menu.json";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
 const Header = () => {
   const [activeMenuLink, setActiveMenuLink] = useState<0 | 1 | 2 | 3>(0);
@@ -32,7 +32,9 @@ const Header = () => {
                   <li className={styles.main__content__list__item}>
                     <Link
                       className={`${styles.main__content__list__item__link} ${
-                        activeMenuLink === 0 ? styles.main__content__list__item__link__active : ''
+                        activeMenuLink === 0
+                          ? styles.main__content__list__item__link__active
+                          : ""
                       }`}
                       onClick={() => setActiveMenuLink(0)}
                       href={menuData.bulletin_board.href}
@@ -43,7 +45,9 @@ const Header = () => {
                   <li className={styles.main__content__list__item}>
                     <Link
                       className={`${styles.main__content__list__item__link} ${
-                        activeMenuLink === 1 ? styles.main__content__list__item__link__active : ''
+                        activeMenuLink === 1
+                          ? styles.main__content__list__item__link__active
+                          : ""
                       }`}
                       onClick={() => setActiveMenuLink(1)}
                       href={menuData.service_center.href}
@@ -54,7 +58,9 @@ const Header = () => {
                   <li className={styles.main__content__list__item}>
                     <Link
                       className={`${styles.main__content__list__item__link} ${
-                        activeMenuLink === 2 ? styles.main__content__list__item__link__active : ''
+                        activeMenuLink === 2
+                          ? styles.main__content__list__item__link__active
+                          : ""
                       }`}
                       onClick={() => setActiveMenuLink(2)}
                       href={menuData.internet_store.href}
@@ -65,7 +71,9 @@ const Header = () => {
                   <li className={styles.main__content__list__item}>
                     <Link
                       className={`${styles.main__content__list__item__link} ${
-                        activeMenuLink === 3 ? styles.main__content__list__item__link__active : ''
+                        activeMenuLink === 3
+                          ? styles.main__content__list__item__link__active
+                          : ""
                       }`}
                       onClick={() => setActiveMenuLink(3)}
                       href={menuData.purchase.href}
@@ -77,9 +85,7 @@ const Header = () => {
               </nav>
             </div>
             <div className={styles.main__actions}>
-              <div>
-                <Location />
-              </div>
+              <Location />
               <div className={styles.main__actions__auth}>
                 <button className={styles.main__actions__auth__btn}>
                   <PersonSvg />
@@ -98,7 +104,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      
     </>
   );
 };

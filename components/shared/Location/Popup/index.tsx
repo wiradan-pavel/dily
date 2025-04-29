@@ -1,14 +1,21 @@
-'use client';
-import { useState } from 'react';
-import { Button } from '@/components/shared';
-import { DotOnMap, GreenDotOnMap, SearchSvg } from '@/components/svgs';
+"use client";
+import { useState } from "react";
+import { Button } from "@/components/shared";
+import { DotOnMap, GreenDotOnMap, SearchSvg } from "@/components/svgs";
+import { removeOverflowHiddenToBody, setLocalStorage } from "@/utils/common";
 
-import data from '@/public/data/locations/locations.json';
+import data from "@/public/data/locations/locations.json";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
-const LocationPopup = () => {
-  const [inputValue, setInputValue] = useState('');
+type SetOpenPopup<T> = (value: T | ((prevState: T) => T)) => void;
+
+interface IPopupProps {
+  setOpenPopup: SetOpenPopup<boolean>;
+}
+
+const Popup = ({ setOpenPopup }: IPopupProps) => {
+  const [inputValue, setInputValue] = useState("Москва");
   const [activeBtn, setActiveBtn] = useState<0 | 1>(0);
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,11 +23,9 @@ const LocationPopup = () => {
   };
 
   const saveLocation = () => {
-    // закрыть попап
-    // убрать оверфлоу
-    // записать локацию в локал сторедж
-    // что, если такого горада не найдет
-    // что, если будет пустое значение
+    setOpenPopup(false);
+    removeOverflowHiddenToBody();
+    setLocalStorage("location", inputValue);
   };
 
   return (
@@ -31,7 +36,7 @@ const LocationPopup = () => {
             <Button
               text="Местоположение"
               onClick={() => setActiveBtn(0)}
-              style={activeBtn === 0 ? 'green' : 'white'}
+              style={activeBtn === 0 ? "green" : "white"}
               paddingX="30px"
               paddingY=""
               borderRadius={10}
@@ -42,7 +47,7 @@ const LocationPopup = () => {
             <Button
               text="Поиск по карте"
               onClick={() => setActiveBtn(1)}
-              style={activeBtn === 1 ? 'green' : 'white'}
+              style={activeBtn === 1 ? "green" : "white"}
               paddingX="52px"
               paddingY=""
               borderRadius={10}
@@ -92,4 +97,4 @@ const LocationPopup = () => {
   );
 };
 
-export default LocationPopup;
+export default Popup;
