@@ -1,0 +1,34 @@
+@use "../../../../../app/globalStyles/var";
+@use "../../../../../app/globalStyles/mixins";
+
+.nav {
+  position: absolute;
+  padding: 25px 0;
+  top: 53px;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 10px;
+  @include mixins.box-shadow((0 4px 4px 0 rgba(0, 0, 0, 0.25)));
+
+  &__list {
+    &__item {
+      margin-bottom: 6px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & a {
+        @include mixins.flex(center, flex-start, 12px);
+        @include mixins.transition(color box-shadow, 0.2s, ease-in-out);
+        padding: 4px 25px;
+
+        &:hover {
+          color: var.$greenBright;
+          @include mixins.box-shadow(0 0 12 -3 rgba(var.$darkGrey, 0.2));
+        }
+      }
+    }
+  }
+}

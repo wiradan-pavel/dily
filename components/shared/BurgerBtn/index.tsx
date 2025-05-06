@@ -1,15 +1,12 @@
-'use client';
-import { useState } from 'react';
+import { IOpenMenuProps } from "@/types/common";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
-const BurgerBtn = () => {
-  const [openCategoryMenu, setOpenCategoryMenu] = useState(false);
-
+const BurgerBtn = ({ openMenu, setOpenMenu }: IOpenMenuProps) => {
   return (
     <div
-      onClick={() => setOpenCategoryMenu(!openCategoryMenu)}
-      className={`${styles.burger} ${openCategoryMenu ? styles.burger__open : ''}`}
+      onClick={() => setOpenMenu(!openMenu)}
+      className={`${styles.burger} ${openMenu ? styles.burger__open : ""}`}
     >
       <span />
       <span />

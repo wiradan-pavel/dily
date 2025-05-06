@@ -3,18 +3,13 @@ import { useState } from "react";
 import { Button } from "@/components/shared";
 import { DotOnMap, GreenDotOnMap, SearchSvg } from "@/components/svgs";
 import { removeOverflowHiddenToBody, setLocalStorage } from "@/utils/common";
+import { IUseStateBoolean } from "@/types/common";
 
 import data from "@/public/data/locations/locations.json";
 
 import styles from "./style.module.scss";
 
-type SetOpenPopup<T> = (value: T | ((prevState: T) => T)) => void;
-
-interface IPopupProps {
-  setOpenPopup: SetOpenPopup<boolean>;
-}
-
-const Popup = ({ setOpenPopup }: IPopupProps) => {
+const Popup = ({ setOpenPopup }: IUseStateBoolean) => {
   const [inputValue, setInputValue] = useState("Москва");
   const [activeBtn, setActiveBtn] = useState<0 | 1>(0);
 

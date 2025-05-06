@@ -1,9 +1,10 @@
-@use '../../../../app/globalStyles/var';
-@use '../../../../app/globalStyles/mixins';
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
 
 .bulletin {
   @include mixins.flex(center, space-between, 10px);
   padding: 10px 0;
+  position: relative;
 
   &__list {
     @include mixins.flex(center, flex-start, 40px);

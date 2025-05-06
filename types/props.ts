@@ -1,7 +1,7 @@
 export interface IButtonProps {
   children?: React.ReactNode;
   text: string;
-  style: 'green' | 'white';
+  style: "green" | "white";
   paddingX: string;
   paddingY: string;
   borderRadius: 10 | 18;
@@ -9,3 +9,5 @@ export interface IButtonProps {
   disabled?: boolean;
   onClick?: () => void;
 }
+
+
