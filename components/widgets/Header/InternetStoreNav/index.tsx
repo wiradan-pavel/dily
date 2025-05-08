@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { CartSvg, CompareSvg, DeliveryAndPaymentSvg, LikeSvg } from '@/components/svgs';
 import { BurgerBtn, SearchForm } from '@/components/shared';
 
-import data from '@/public/data/nav/internet_store.json';
+import data from '@/public/data/nav/header/internet_store.json';
 
 import styles from './style.module.scss';
 

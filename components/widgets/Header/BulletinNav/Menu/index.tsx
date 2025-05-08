@@ -17,7 +17,7 @@ import {
   HandSvg,
 } from "@/components/svgs/index";
 
-import data from "@/public/data/nav/bulletin_menu.json";
+import data from "@/public/data/nav/menu/bulletin_menu.json";
 
 import styles from "./style.module.scss";
 

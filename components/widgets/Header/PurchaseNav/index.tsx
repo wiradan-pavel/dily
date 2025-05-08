@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { BurgerBtn, Button, SearchForm } from '@/components/shared';
 import { AdressesSvg } from '@/components/svgs';
 
-import data from '@/public/data/nav/purchase.json';
+import data from '@/public/data/nav/header/purchase.json';
 
 import styles from './style.module.scss';
 

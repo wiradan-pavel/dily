@@ -10,7 +10,7 @@ import ServiceCenterNav from "./ServiceCenterNav";
 import InternetStoreNav from "./InternetStoreNav";
 import PurchaseNav from "./PurchaseNav";
 
-import menuData from "@/public/data/nav/menu.json";
+import menuData from "@/public/data/nav/header/header.json";
 
 import styles from "./style.module.scss";
 

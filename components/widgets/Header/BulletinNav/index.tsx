@@ -10,7 +10,7 @@ import {
 } from "@/components/svgs";
 import Menu from "./Menu";
 
-import bulletinBoardData from "@/public/data/nav/bulletin_board.json";
+import bulletinBoardData from "@/public/data/nav/header/bulletin_board.json";
 
 import styles from "./style.module.scss";
 

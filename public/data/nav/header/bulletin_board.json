@@ -1,0 +1,18 @@
+{
+  "announcement": {
+    "title": "Объявления",
+    "href": "/"
+  },
+  "stores": {
+    "title": "Магазины",
+    "href": "/"
+  },
+  "charity": {
+    "title": "Благотворительность",
+    "href": "/"
+  },
+  "btn_new_announcement": {
+    "title": "Подать объявление",
+    "href": "/"
+  }
+}

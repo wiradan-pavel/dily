@@ -1,30 +1,32 @@
-'use client';
-import { useState } from 'react';
-import Link from 'next/link';
-import { Button, SearchForm } from '@/components/shared';
-import { AdressesSvg, ArrowDownSvg, WhatWeAreFixSvg } from '@/components/svgs';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { Button, SearchForm } from "@/components/shared";
+import { AdressesSvg, ArrowDownSvg, WhatWeAreFixSvg } from "@/components/svgs";
+import Menu from "./Menu";
 
-import data from '@/public/data/nav/service_center.json';
+import data from "@/public/data/nav/header/service_center.json";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
 const ServiceCenterNav = () => {
   const [activeServicePage, setActiveServicePage] = useState<0 | 1>(0);
-  const [openServiceMenu, setOpenServiceMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => {
     setActiveServicePage(0);
-    setOpenServiceMenu(!openServiceMenu);
+    setOpenMenu(!openMenu);
   };
 
   return (
     <div className={styles.service}>
+      {openMenu && <Menu />}
       <nav>
         <ul className={styles.service__list}>
           <li
             className={`${styles.service__list__item} ${
-              activeServicePage === 0 ? styles.service__list__item__active : ''
-            } ${openServiceMenu ? styles.service__list__item__open : ''}`}
+              activeServicePage === 0 ? styles.service__list__item__active : ""
+            } ${openMenu ? styles.service__list__item__open : ""}`}
             onClick={handleOpenMenu}
           >
             <button className={styles.service__list__item__btn}>
@@ -35,7 +37,7 @@ const ServiceCenterNav = () => {
           </li>
           <li
             className={`${styles.service__list__item} ${
-              activeServicePage === 1 ? styles.service__list__item__active : ''
+              activeServicePage === 1 ? styles.service__list__item__active : ""
             }`}
             onClick={() => setActiveServicePage(1)}
           >
