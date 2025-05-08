@@ -1,35 +1,42 @@
-'use client';
-import { useState } from 'react';
-import Link from 'next/link';
-import { BurgerBtn, Button, SearchForm } from '@/components/shared';
-import { AdressesSvg } from '@/components/svgs';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { BurgerBtn, Button, SearchForm } from "@/components/shared";
+import { AdressesSvg } from "@/components/svgs";
+import Menu from "./Menu";
 
-import data from '@/public/data/nav/header/purchase.json';
+import data from "@/public/data/nav/header/purchase.json";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
 const PurchaseNav = () => {
   const [activePurchasePage, setActivePurchasePage] = useState<0 | 1>(0);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className={styles.purchase}>
+      {openMenu && <Menu />}
       <nav>
         <ul className={styles.purchase__list}>
           <li
             onClick={() => setActivePurchasePage(0)}
             className={`${styles.purchase__list__item} ${
-              activePurchasePage === 0 ? styles.purchase__list__item__active : ''
+              activePurchasePage === 0
+                ? styles.purchase__list__item__active
+                : ""
             }`}
           >
             <button className={styles.purchase__list__item__btn}>
-              <BurgerBtn />
+              <BurgerBtn openMenu={openMenu} setOpenMenu={setOpenMenu} />
               {data.what_we_are_buy.title}
             </button>
           </li>
           <li
             onClick={() => setActivePurchasePage(1)}
             className={`${styles.purchase__list__item} ${
-              activePurchasePage === 1 ? styles.purchase__list__item__active : ''
+              activePurchasePage === 1
+                ? styles.purchase__list__item__active
+                : ""
             }`}
           >
             <Link
