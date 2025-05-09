@@ -1,5 +1,5 @@
-@use '../../../../app/globalStyles/var';
-@use '../../../../app/globalStyles/mixins';
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
 
 .store {
   @include mixins.flex(center, space-between, 10px);

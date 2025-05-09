@@ -7,8 +7,9 @@ import {
   DeliveryAndPaymentSvg,
   LikeSvg,
 } from "@/components/svgs";
-import Menu from "./Menu";
 import { BurgerBtn, SearchForm } from "@/components/shared";
+import { CartModal, CompareModal, LikedModal } from "./Modals";
+import Menu from "./Menu";
 
 import data from "@/public/data/nav/header/internet_store.json";
 
@@ -17,6 +18,31 @@ import styles from "./style.module.scss";
 const InternetStoreNav = () => {
   const [activeStorePage, setActiveStorePage] = useState<0 | 1>(0);
   const [openMenu, setOpenMenu] = useState(false);
+  const [activeModal, setActiveModal] = useState<0 | 1 | 2 | 3>(0);
+
+  const handleClickCompareModal = () => {
+    if (activeModal === 1) {
+      setActiveModal(0);
+    } else {
+      setActiveModal(1);
+    }
+  };
+
+  const handleClickLikedModal = () => {
+    if (activeModal === 2) {
+      setActiveModal(0);
+    } else {
+      setActiveModal(2);
+    }
+  };
+
+  const handleClickCartModal = () => {
+    if (activeModal === 3) {
+      setActiveModal(0);
+    } else {
+      setActiveModal(3);
+    }
+  };
 
   return (
     <div className={styles.store}>
@@ -61,21 +87,33 @@ const InternetStoreNav = () => {
           </Link>
           <ul className={styles.store__actions__btns__list}>
             <li className={styles.store__actions__btns__list__item}>
-              <button className={styles.store__actions__btns__list__item__btn}>
+              <button
+                onClick={handleClickCompareModal}
+                className={styles.store__actions__btns__list__item__btn}
+              >
                 <CompareSvg />
               </button>
             </li>
             <li className={styles.store__actions__btns__list__item}>
-              <button className={styles.store__actions__btns__list__item__btn}>
+              <button
+                onClick={handleClickLikedModal}
+                className={styles.store__actions__btns__list__item__btn}
+              >
                 <LikeSvg />
               </button>
             </li>
             <li className={styles.store__actions__btns__list__item}>
-              <button className={styles.store__actions__btns__list__item__btn}>
+              <button
+                onClick={handleClickCartModal}
+                className={styles.store__actions__btns__list__item__btn}
+              >
                 <CartSvg />
               </button>
             </li>
           </ul>
+          {activeModal === 1 && <CompareModal />}
+          {activeModal === 2 && <LikedModal />}
+          {activeModal === 3 && <CartModal />}
         </div>
       </div>
     </div>

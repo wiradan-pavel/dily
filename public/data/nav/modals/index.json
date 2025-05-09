@@ -1,0 +1,35 @@
+{
+  "internet_store_modal_compare": {
+    "empty_text": "В сравнении нет товаров, выберите что-нибудь из каталога",
+    "btn": {
+      "text": "В сравнение",
+      "href": "/"
+    },
+    "btn_to_catalog": {
+      "text": "В каталог",
+      "href": "/"
+    }
+  },
+  "internet_store_modal_liked": {
+    "empty_text": "В избранном нет товаров, выберите что-нибудь из каталога",
+    "btn": {
+      "text": "В избранное",
+      "href": "/"
+    },
+    "btn_to_catalog": {
+      "text": "В каталог",
+      "href": "/"
+    }
+  },
+  "internet_store_modal_cart": {
+    "empty_text": "В корзине нет товаров, выберите что-нибудь из каталога",
+    "btn": {
+      "text": "В корзину",
+      "href": "/"
+    },
+    "btn_to_catalog": {
+      "text": "В каталог",
+      "href": "/"
+    }
+  }
+}

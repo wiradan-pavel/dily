@@ -9,11 +9,11 @@
   @include mixins.transition(transform, 0.2s, ease-in-out);
 
   &:hover {
-    @include mixins.transform(scale(1.1));
+    @include mixins.transform(scale(1.05));
   }
 
   &:active {
-    @include mixins.transform(scale(0.9));
+    @include mixins.transform(scale(0.95));
   }
 
   &:disabled {
