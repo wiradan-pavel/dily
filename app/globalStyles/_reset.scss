@@ -122,7 +122,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -146,4 +146,9 @@ button {
 input {
   outline: none;
   border: none;
+  font-family: inherit;
+  margin: 0;
+}
+textarea {
+  outline: none;
 }

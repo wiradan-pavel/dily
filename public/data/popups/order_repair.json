@@ -1,0 +1,21 @@
+{
+  "title": "Заказать ремонт",
+  "form": {
+    "name": "Имя",
+    "name_placeholder": "Петров Петр",
+    "type_of_device": "Тип устройства",
+    "type_of_device_placeholder": "Xiaomi",
+    "phone": "Телефон",
+    "phone_placeholder": "+ 7 (123)-456-78-90",
+    "brand_and_model": "Бренд и модель",
+    "brand_and_model_placeholder": "Mi 8",
+    "description": "Опишите поломку",
+    "description_placeholder": "Разбилось стекло у смартфона Xiaomi  Mi 8.",
+    "agree": "Я согласен с условиями обработки персональных данных",
+    "btn_text": "Заказать ремонт"
+  },
+  "form_send_success": {
+    "title": "Ваша заявка отправлена!",
+    "text": "Наш сотрудник скоро свяжется с вами"
+  }
+}
