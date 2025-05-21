@@ -3,6 +3,10 @@
 @use "var";
 @use "mixins";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: TTNorms;
   font-weight: 500;
@@ -24,7 +28,7 @@ body {
   right: 0;
   background-color: rgba($color: var.$darkGrey, $alpha: 0.5);
   height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   @include mixins.flex(center, center, 0px);
 }
 

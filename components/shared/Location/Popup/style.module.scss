@@ -2,8 +2,8 @@
 @use '../../../../app/globalStyles/mixins';
 
 .popup {
-  width: 700px;
-  height: 510px;
+  width: 780px;
+  height: 580px;
   background-color: #fff;
   border-radius: 10px;
   padding: 30px 40px;
@@ -12,10 +12,9 @@
     &__btns {
       @include mixins.flex(center, flex-start, 30px);
       padding-bottom: 30px;
-      height: 45px;
 
       & button {
-        height: inherit;
+        line-height: 152%;
       }
     }
 

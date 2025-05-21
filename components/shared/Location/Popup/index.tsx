@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Button } from "@/components/shared";
 import { DotOnMap, GreenDotOnMap, SearchSvg } from "@/components/svgs";
 import { removeOverflowHiddenToBody, setLocalStorage } from "@/utils/common";
-import { IUseStateBoolean } from "@/types/common";
+import { UseState } from "@/types/common";
 
 import data from "@/public/data/locations/locations.json";
 
 import styles from "./style.module.scss";
 
-const Popup = ({ setOpenPopup }: IUseStateBoolean) => {
+const Popup = ({ setOpenPopup }: { setOpenPopup: UseState<boolean> }) => {
   const [inputValue, setInputValue] = useState("Москва");
   const [activeBtn, setActiveBtn] = useState<0 | 1>(0);
 
@@ -33,7 +33,7 @@ const Popup = ({ setOpenPopup }: IUseStateBoolean) => {
               onClick={() => setActiveBtn(0)}
               style={activeBtn === 0 ? "green" : "white"}
               paddingX="30px"
-              paddingY=""
+              paddingY="10px"
               borderRadius={10}
               isShadow={activeBtn !== 0}
             >
@@ -44,7 +44,7 @@ const Popup = ({ setOpenPopup }: IUseStateBoolean) => {
               onClick={() => setActiveBtn(1)}
               style={activeBtn === 1 ? "green" : "white"}
               paddingX="52px"
-              paddingY=""
+              paddingY="10px"
               borderRadius={10}
               isShadow={activeBtn !== 1}
             />

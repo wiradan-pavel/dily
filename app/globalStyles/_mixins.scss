@@ -53,3 +53,9 @@
   -webkit-filter: $filter;
   filter: $filter;
 }
+
+@mixin appearance($appearance) {
+  -webkit-appearance: $appearance;
+  -moz-appearance: $appearance;
+  appearance: $appearance;
+}

@@ -5,6 +5,7 @@ import Button from "./Button";
 import BurgerBtn from "./BurgerBtn";
 import PopupOrderRepair from "./PopupOrderRepair";
 import PopupRequestSend from "./PopupRequestSend";
+import PopupSellUs from "./PopupSellUs";
 
 export {
   Logo,
@@ -14,4 +15,5 @@ export {
   BurgerBtn,
   PopupOrderRepair,
   PopupRequestSend,
+  PopupSellUs,
 };

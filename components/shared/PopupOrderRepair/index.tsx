@@ -10,7 +10,7 @@ type Inputs = {
   name: string;
   typeDevice: string;
   phoneNumber: number;
-  brandModel: string;
+  brandModel?: string;
   description: string;
   isAgree: boolean;
 };
@@ -38,7 +38,7 @@ const PopupOrderRepair = ({
         >
           <CloseBtnSvg />
         </button>
-        <h6 className={styles.popup__title}>{data.title}</h6>
+        <h3 className={styles.popup__title}>{data.title}</h3>
         <form className={styles.popup__form} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.popup__form__labels}>
             <label className={styles.popup__form__labels__label}>
@@ -69,7 +69,7 @@ const PopupOrderRepair = ({
               {data.form.brand_and_model}
               <input
                 type="text"
-                {...register("brandModel", { required: true })}
+                {...register("brandModel")}
                 placeholder={data.form.brand_and_model_placeholder}
               />
             </label>
