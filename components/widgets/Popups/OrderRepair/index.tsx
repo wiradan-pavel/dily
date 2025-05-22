@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import { CloseBtn } from "../../../shared/index";
 import { UseState } from "@/types/common";
-import { CloseBtnSvg } from "@/components/svgs";
 
 import data from "@/public/data/popups/order_repair.json";
 
@@ -15,7 +15,7 @@ type Inputs = {
   isAgree: boolean;
 };
 
-const PopupOrderRepair = ({
+const OrderRepair = ({
   setOpenPopupOrderRepair,
   setOpenRequestSend,
 }: {
@@ -32,12 +32,7 @@ const PopupOrderRepair = ({
   return (
     <div className="popup-wrapper">
       <div className={styles.popup}>
-        <button
-          onClick={() => setOpenPopupOrderRepair(false)}
-          className={styles.popup__btn}
-        >
-          <CloseBtnSvg />
-        </button>
+        <CloseBtn onClick={() => setOpenPopupOrderRepair(false)} />
         <h3 className={styles.popup__title}>{data.title}</h3>
         <form className={styles.popup__form} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.popup__form__labels}>
@@ -101,4 +96,4 @@ const PopupOrderRepair = ({
   );
 };
 
-export default PopupOrderRepair;
+export default OrderRepair;

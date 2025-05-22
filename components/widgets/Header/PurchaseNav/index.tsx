@@ -1,13 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import {
-  BurgerBtn,
-  Button,
-  PopupRequestSend,
-  PopupSellUs,
-  SearchForm,
-} from "@/components/shared";
+import { BurgerBtn, Button, SearchForm } from "@/components/shared";
+import { RequestSend, SellUs } from "../../Popups";
 import { AdressesSvg } from "@/components/svgs";
 import Menu from "./Menu";
 
@@ -28,13 +23,13 @@ const PurchaseNav = () => {
   return (
     <>
       {openPopupSellUs && (
-        <PopupSellUs
+        <SellUs
           setOpenPopupSellUs={setOpenPopupSellUs}
           setOpenPopupRequestSend={setOpenPopupRequestSend}
         />
       )}
       {openPopupRequestSend && (
-        <PopupRequestSend setOpenPopupRequestSend={setOpenPopupRequestSend} />
+        <RequestSend setOpenPopupRequestSend={setOpenPopupRequestSend} />
       )}
       <div className={styles.purchase}>
         {openMenu && <Menu />}

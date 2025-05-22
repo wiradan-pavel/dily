@@ -1,12 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import {
-  Button,
-  PopupOrderRepair,
-  PopupRequestSend,
-  SearchForm,
-} from "@/components/shared";
+import { Button, SearchForm } from "@/components/shared";
+import { OrderRepair, RequestSend } from "../../Popups";
 import { AdressesSvg, ArrowDownSvg, WhatWeAreFixSvg } from "@/components/svgs";
 import { addOverflowHiddenToBody } from "@/utils/common";
 import Menu from "./Menu";
@@ -34,13 +30,13 @@ const ServiceCenterNav = () => {
   return (
     <>
       {openPopupOrderRepair && (
-        <PopupOrderRepair
+        <OrderRepair
           setOpenPopupOrderRepair={setOpenPopupOrderRepair}
           setOpenRequestSend={setOpenPopupRequestSend}
         />
       )}
       {openPopupRequestSend && (
-        <PopupRequestSend setOpenPopupRequestSend={setOpenPopupRequestSend} />
+        <RequestSend setOpenPopupRequestSend={setOpenPopupRequestSend} />
       )}
       <div className={styles.service}>
         {openMenu && <Menu />}

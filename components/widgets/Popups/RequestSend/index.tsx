@@ -1,11 +1,11 @@
-import { CloseBtnSvg } from "@/components/svgs";
+import { CloseBtn } from "../../../shared/index";
 import { UseState } from "@/types/common";
 
 import data from "@/public/data/popups/request_send.json";
 
 import styles from "./style.module.scss";
 
-const PopupRequestSend = ({
+const RequestSend = ({
   setOpenPopupRequestSend,
 }: {
   setOpenPopupRequestSend: UseState<boolean>;
@@ -13,12 +13,7 @@ const PopupRequestSend = ({
   return (
     <div className="popup-wrapper">
       <div className={styles.popup}>
-        <button
-          onClick={() => setOpenPopupRequestSend(false)}
-          className={styles.popup__btn}
-        >
-          <CloseBtnSvg />
-        </button>
+        <CloseBtn onClick={() => setOpenPopupRequestSend(false)} />
         <h6 className={styles.popup__title}>{data.title}</h6>
         <p className={styles.popup__text}>{data.text}</p>
       </div>
@@ -26,4 +21,4 @@ const PopupRequestSend = ({
   );
 };
 
-export default PopupRequestSend;
+export default RequestSend;

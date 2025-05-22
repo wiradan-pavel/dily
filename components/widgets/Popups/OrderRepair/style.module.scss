@@ -1,5 +1,5 @@
-@use "../../../app/globalStyles/var";
-@use "../../../app/globalStyles/mixins";
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
 
 .popup {
   width: 800px;
@@ -7,20 +7,6 @@
   border-radius: 10px;
   padding: 30px 65px 70px;
   position: relative;
-
-  &__btn {
-    position: absolute;
-    top: -30px;
-    right: -30px;
-
-    & svg circle {
-      @include mixins.transition(opacity, 0.2s, ease-in-out);
-    }
-
-    &:hover svg circle {
-      opacity: 1;
-    }
-  }
 
   &__title {
     padding-bottom: 30px;
@@ -51,9 +37,9 @@
     }
 
     &__desc {
-      padding: 20px 0 30px;
       @include mixins.flex(flex-start, flex-start, 5px);
       @include mixins.flex-direction-column();
+      padding: 20px 0 30px;
       font-weight: 700;
       font-size: 14px;
 

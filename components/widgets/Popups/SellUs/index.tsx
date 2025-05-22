@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { ArrowDownSvg, CloseBtnSvg, PhotoVideoSvg } from "@/components/svgs";
+import { CloseBtn } from "../../../shared/index";
+import { ArrowDownSvg, PhotoVideoSvg } from "@/components/svgs";
 import { UseState } from "@/types/common";
 
 import data from "@/public/data/popups/sell_us.json";
@@ -26,7 +27,7 @@ type Inputs = {
   isAgree: boolean;
 };
 
-const PopupSellUs = ({
+const SellUs = ({
   setOpenPopupSellUs,
   setOpenPopupRequestSend,
 }: {
@@ -45,12 +46,7 @@ const PopupSellUs = ({
   return (
     <div className="popup-wrapper">
       <div className={styles.popup}>
-        <button
-          onClick={() => setOpenPopupSellUs(false)}
-          className={styles.popup__btn}
-        >
-          <CloseBtnSvg />
-        </button>
+        <CloseBtn onClick={() => setOpenPopupSellUs(false)} />
         <h3 className={styles.popup__title}>{data.title}</h3>
         <form className={styles.popup__form} onSubmit={handleSubmit(onSubmit)}>
           <label className={styles.popup__form__name}>
@@ -163,4 +159,4 @@ const PopupSellUs = ({
   );
 };
 
-export default PopupSellUs;
+export default SellUs;

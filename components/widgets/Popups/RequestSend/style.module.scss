@@ -1,0 +1,22 @@
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
+
+.popup {
+  width: 500px;
+  height: 270px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+
+  &__title {
+    padding: 55px 0 25px;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+
+  &__text {
+    opacity: 0.8;
+  }
+}
