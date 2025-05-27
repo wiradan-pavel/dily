@@ -20,6 +20,7 @@ body {
 }
 
 .popup-wrapper {
+  overflow: auto;
   position: absolute;
   z-index: 101;
   top: 0;
@@ -27,8 +28,6 @@ body {
   bottom: 0;
   right: 0;
   background-color: rgba($color: var.$darkGrey, $alpha: 0.5);
-  height: 100vh;
-  min-width: 100vw;
   @include mixins.flex(center, center, 0px);
 }
 
