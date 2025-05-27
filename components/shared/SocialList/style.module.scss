@@ -1,0 +1,24 @@
+@use "../../../app/globalStyles/var";
+@use "../../../app/globalStyles/mixins";
+
+.list {
+  @include mixins.flex(center, flex-start, 10px);
+
+  &__item {
+    & a {
+      @include mixins.flex(center, flex-start, 0px);
+      padding: 7px;
+      background-color: #fff;
+      border-radius: 50%;
+      @include mixins.transition(transform, 0.2s, ease-in-out);
+
+      &:hover {
+        @include mixins.transform(scale(1.05));
+      }
+
+      &:active {
+        @include mixins.transform(scale(0.95));
+      }
+    }
+  }
+}
