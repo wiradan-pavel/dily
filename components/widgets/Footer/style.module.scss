@@ -43,18 +43,35 @@
       &__item {
         font-size: 12px;
         line-height: 140%;
-        @include mixins.transition(color, 0.2s, ease-in-out);
+
+        & a {
+          @include mixins.transition(color, 0.2s, ease-in-out);
+
+          &:hover {
+            color: var.$greenBright;
+          }
+        }
 
         &:first-child {
           font-size: 14px;
           line-height: 150%;
           font-weight: 700;
         }
-
-        &:hover {
-          color: var.$greenBright;
-        }
       }
+    }
+
+    @media (max-width: var.$lg) {
+      gap: 40px;
+    }
+
+    @media (max-width: var.$md) {
+      @include mixins.grid-col(repeat(2, 1fr), 40px);
+    }
+
+    @media (max-width: var.$sm) {
+      gap: 20px;
+      padding-top: 15px;
+      padding-bottom: 50px;
     }
   }
 
@@ -63,22 +80,38 @@
     @include mixins.flex(center, space-between, 10px);
 
     &__list {
-      @include mixins.flex(center, flex-start, 45px);
+      @include mixins.flex(normal, flex-start, 45px);
 
       &__item {
         font-size: 12px;
         line-height: 140%;
-        @include mixins.transition(color, 0.2s, ease-in-out);
 
-        &:hover {
-          color: var.$greenBright;
+        & a {
+          @include mixins.transition(color, 0.2s, ease-in-out);
+
+          &:hover {
+            color: var.$greenBright;
+          }
         }
+      }
+
+      @media (max-width: var.$lg) {
+        gap: 20px;
+      }
+
+      @media (max-width: var.$md) {
+        @include mixins.grid-col(repeat(2, 1fr), 20px);
       }
     }
 
     &__dily {
       @include mixins.flex(center, flex-start, 13px);
       font-size: 14px;
+    }
+
+    @media (max-width: var.$md) {
+      @include mixins.flex-direction-column();
+      gap: 20px;
     }
   }
 }

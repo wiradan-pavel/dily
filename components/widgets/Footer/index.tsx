@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { Location, Logo, SocialList } from "@/components/shared";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 import data from "@/public/data/nav/footer/footer.json";
 
@@ -12,6 +14,9 @@ const Footer = () => {
   const storeContentData = contentData.internet_store;
   const usersContentData = contentData.for_users;
 
+  const isMediaMD = useMediaQuery(768);
+  const isMediaSM = useMediaQuery(576);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__inner}>
@@ -19,12 +24,14 @@ const Footer = () => {
           <div className={`${styles.footer__actions__inner} container`}>
             <div className={styles.footer__actions__logo}>
               <Logo />
-              <Location />
+              {!isMediaSM && <Location />}
             </div>
             <div className={styles.footer__actions__social}>
-              <p className={styles.footer__actions__social__text}>
-                Присоединяйтесь к нам
-              </p>
+              {!isMediaMD && (
+                <p className={styles.footer__actions__social__text}>
+                  Присоединяйтесь к нам
+                </p>
+              )}
               <SocialList />
             </div>
           </div>
