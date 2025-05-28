@@ -8,6 +8,7 @@ import {
   BulletinNavStoresSvg,
   BulletinNavCharitySvg,
 } from "@/components/svgs";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Menu from "./Menu";
 
 import bulletinBoardData from "@/public/data/nav/header/bulletin_board.json";
@@ -17,6 +18,10 @@ import styles from "./style.module.scss";
 const BulletinNav = () => {
   const [activeBulletinPage, setActiveBulletinPage] = useState<0 | 1 | 2>(0);
   const [openMenu, setOpenMenu] = useState(false);
+
+  const isMediaXL = useMediaQuery(1200);
+  const isMediaMD = useMediaQuery(768);
+  const isMediaSM = useMediaQuery(576);
 
   return (
     <div className={styles.bulletin}>
@@ -42,51 +47,55 @@ const BulletinNav = () => {
               {bulletinBoardData.announcement.title}
             </Link>
           </li>
-          <li
-            className={`${styles.bulletin__list__item} ${
-              activeBulletinPage === 1
-                ? styles.bulletin__list__item__active
-                : ""
-            }`}
-          >
-            <Link
-              onClick={() => setActiveBulletinPage(1)}
-              href={bulletinBoardData.stores.href}
-              className={styles.bulletin__list__item__link}
+          {!isMediaSM && (
+            <li
+              className={`${styles.bulletin__list__item} ${
+                activeBulletinPage === 1
+                  ? styles.bulletin__list__item__active
+                  : ""
+              }`}
             >
-              <BulletinNavStoresSvg />
-              {bulletinBoardData.stores.title}
-            </Link>
-          </li>
-          <li
-            className={`${styles.bulletin__list__item} ${
-              activeBulletinPage === 2
-                ? styles.bulletin__list__item__active
-                : ""
-            }`}
-          >
-            <Link
-              onClick={() => setActiveBulletinPage(2)}
-              href={bulletinBoardData.charity.href}
-              className={styles.bulletin__list__item__link}
+              <Link
+                onClick={() => setActiveBulletinPage(1)}
+                href={bulletinBoardData.stores.href}
+                className={styles.bulletin__list__item__link}
+              >
+                <BulletinNavStoresSvg />
+                {bulletinBoardData.stores.title}
+              </Link>
+            </li>
+          )}
+          {!isMediaMD && (
+            <li
+              className={`${styles.bulletin__list__item} ${
+                activeBulletinPage === 2
+                  ? styles.bulletin__list__item__active
+                  : ""
+              }`}
             >
-              <BulletinNavCharitySvg />
-              {bulletinBoardData.charity.title}
-            </Link>
-          </li>
+              <Link
+                onClick={() => setActiveBulletinPage(2)}
+                href={bulletinBoardData.charity.href}
+                className={styles.bulletin__list__item__link}
+              >
+                <BulletinNavCharitySvg />
+                {bulletinBoardData.charity.title}
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
       <div className={styles.bulletin__actions}>
-        <SearchForm />
+        {!isMediaXL && <SearchForm />}
         <Button
           text="Подать объявление"
           style="green"
-          paddingX="25px"
+          paddingX={isMediaSM ? "8px" : "25px"}
           paddingY="6px"
           borderRadius={18}
         >
           <Link href="/" />
-          <AddSvg />
+          {!isMediaSM && <AddSvg />}
         </Button>
       </div>
     </div>

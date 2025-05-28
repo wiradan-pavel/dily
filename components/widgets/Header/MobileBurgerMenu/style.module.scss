@@ -1,0 +1,26 @@
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
+
+.list {
+  @include mixins.flex(normal, flex-start, 10px);
+  @include mixins.flex-direction-column();
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 10px;
+  top: 71px;
+  right: 20px;
+  width: 250px;
+  padding: 20px 0;
+
+  &__item {
+    @include mixins.transition(color box-shadow, 0.2s, ease-in-out);
+    @include mixins.flex(center, center, 0px);
+    height: 40px;
+
+    &__active {
+      color: var.$greenBright;
+      @include mixins.box-shadow(0 0 12 -3 rgba(var.$darkGrey, 0.2));
+    }
+  }
+}

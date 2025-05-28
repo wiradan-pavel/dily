@@ -3,6 +3,7 @@
 
 .bulletin {
   @include mixins.flex(center, space-between, 10px);
+  height: 50px;
   padding: 10px 0;
   position: relative;
 
@@ -21,6 +22,10 @@
 
       &__link {
         @include mixins.flex(center, flex-start, 10px);
+
+        @media (max-width: var.$sm) {
+          gap: 5px;
+        }
       }
 
       // svgs start
@@ -62,6 +67,14 @@
         }
       }
       // svgs end
+    }
+
+    @media (max-width: var.$lg) {
+      gap: 20px;
+    }
+
+    @media (max-width: var.$sm) {
+      gap: 10px;
     }
   }
 

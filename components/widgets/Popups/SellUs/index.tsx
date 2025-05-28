@@ -1,7 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { CloseBtn } from "../../../shared/index";
 import { ArrowDownSvg, PhotoVideoSvg } from "@/components/svgs";
-import { UseState } from "@/types/common";
 
 import data from "@/public/data/popups/sell_us.json";
 import locations from "@/public/data/locations/locations.json";
@@ -28,25 +27,25 @@ type Inputs = {
 };
 
 const SellUs = ({
-  setOpenPopupSellUs,
-  setOpenPopupRequestSend,
+  handleClosePopupSellUs,
+  handleOpenPopupRequestSend,
 }: {
-  setOpenPopupSellUs: UseState<boolean>;
-  setOpenPopupRequestSend: UseState<boolean>;
+  handleClosePopupSellUs: () => void;
+  handleOpenPopupRequestSend: () => void;
 }) => {
   const acceptFileFormats = ".jpg, .jpeg, .png, .mp4";
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    setOpenPopupSellUs(false);
-    setOpenPopupRequestSend(true);
+    handleClosePopupSellUs();
+    handleOpenPopupRequestSend();
     console.log(data);
   };
 
   return (
     <div className="popup-wrapper">
       <div className={styles.popup}>
-        <CloseBtn onClick={() => setOpenPopupSellUs(false)} />
+        <CloseBtn onClick={handleClosePopupSellUs} />
         <h3 className={styles.popup__title}>{data.title}</h3>
         <form className={styles.popup__form} onSubmit={handleSubmit(onSubmit)}>
           <label className={styles.popup__form__name}>

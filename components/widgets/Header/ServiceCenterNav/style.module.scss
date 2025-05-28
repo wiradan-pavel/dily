@@ -1,8 +1,9 @@
-@use '../../../../app/globalStyles/var';
-@use '../../../../app/globalStyles/mixins';
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
 
 .service {
   @include mixins.flex(center, space-between, 10px);
+  height: 50px;
   padding: 10px 0;
   position: relative;
 
@@ -20,6 +21,10 @@
 
         & svg path {
           @include mixins.transition(stroke fill, 0.2s, ease-in-out);
+        }
+
+        @media (max-width: var.$sm) {
+          gap: 5px;
         }
       }
 

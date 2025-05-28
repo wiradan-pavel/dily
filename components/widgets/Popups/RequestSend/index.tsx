@@ -1,19 +1,18 @@
 import { CloseBtn } from "../../../shared/index";
-import { UseState } from "@/types/common";
 
 import data from "@/public/data/popups/request_send.json";
 
 import styles from "./style.module.scss";
 
 const RequestSend = ({
-  setOpenPopupRequestSend,
+  handleClosePopupRequestSend,
 }: {
-  setOpenPopupRequestSend: UseState<boolean>;
+  handleClosePopupRequestSend: () => void;
 }) => {
   return (
     <div className="popup-wrapper">
       <div className={styles.popup}>
-        <CloseBtn onClick={() => setOpenPopupRequestSend(false)} />
+        <CloseBtn onClick={handleClosePopupRequestSend} />
         <h6 className={styles.popup__title}>{data.title}</h6>
         <p className={styles.popup__text}>{data.text}</p>
       </div>

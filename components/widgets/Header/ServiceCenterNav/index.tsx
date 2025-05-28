@@ -4,7 +4,11 @@ import Link from "next/link";
 import { Button, SearchForm } from "@/components/shared";
 import { OrderRepair, RequestSend } from "../../Popups";
 import { AdressesSvg, ArrowDownSvg, WhatWeAreFixSvg } from "@/components/svgs";
-import { addOverflowHiddenToBody } from "@/utils/common";
+import {
+  addOverflowHiddenToBody,
+  removeOverflowHiddenToBody,
+} from "@/utils/common";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Menu from "./Menu";
 
 import data from "@/public/data/nav/header/service_center.json";
@@ -17,6 +21,9 @@ const ServiceCenterNav = () => {
   const [openPopupOrderRepair, setOpenPopupOrderRepair] = useState(false);
   const [openPopupRequestSend, setOpenPopupRequestSend] = useState(false);
 
+  const isMediaXL = useMediaQuery(1200);
+  const isMediaSM = useMediaQuery(576);
+
   const handleOpenMenu = () => {
     setActiveServicePage(0);
     setOpenMenu(!openMenu);
@@ -27,16 +34,33 @@ const ServiceCenterNav = () => {
     addOverflowHiddenToBody();
   };
 
+  const handleClosePopupOrderRepair = () => {
+    setOpenPopupOrderRepair(false);
+    removeOverflowHiddenToBody();
+  };
+
+  const handleOpenPopupRequestSend = () => {
+    setOpenPopupRequestSend(true);
+    addOverflowHiddenToBody();
+  };
+
+  const handleClosePopupRequestSend = () => {
+    setOpenPopupRequestSend(false);
+    removeOverflowHiddenToBody();
+  };
+
   return (
     <>
       {openPopupOrderRepair && (
         <OrderRepair
-          setOpenPopupOrderRepair={setOpenPopupOrderRepair}
-          setOpenRequestSend={setOpenPopupRequestSend}
+          handleClosePopupOrderRepair={handleClosePopupOrderRepair}
+          handleOpenPopupRequestSend={handleOpenPopupRequestSend}
         />
       )}
       {openPopupRequestSend && (
-        <RequestSend setOpenPopupRequestSend={setOpenPopupRequestSend} />
+        <RequestSend
+          handleClosePopupRequestSend={handleClosePopupRequestSend}
+        />
       )}
       <div className={styles.service}>
         {openMenu && <Menu />}
@@ -56,30 +80,32 @@ const ServiceCenterNav = () => {
                 <ArrowDownSvg />
               </button>
             </li>
-            <li
-              className={`${styles.service__list__item} ${
-                activeServicePage === 1
-                  ? styles.service__list__item__active
-                  : ""
-              }`}
-              onClick={() => setActiveServicePage(1)}
-            >
-              <Link
-                className={styles.service__list__item__link}
-                href={data.addresses_of_services.href}
+            {!isMediaSM && (
+              <li
+                className={`${styles.service__list__item} ${
+                  activeServicePage === 1
+                    ? styles.service__list__item__active
+                    : ""
+                }`}
+                onClick={() => setActiveServicePage(1)}
               >
-                <AdressesSvg />
-                {data.addresses_of_services.title}
-              </Link>
-            </li>
+                <Link
+                  className={styles.service__list__item__link}
+                  href={data.addresses_of_services.href}
+                >
+                  <AdressesSvg />
+                  {data.addresses_of_services.title}
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
         <div className={styles.service__actions}>
-          <SearchForm />
+          {!isMediaXL && <SearchForm />}
           <Button
             text={data.btn_order_repair.title}
             style="green"
-            paddingX="25px"
+            paddingX={isMediaSM ? "15px" : "25px"}
             paddingY="7px"
             borderRadius={18}
             onClick={handleOpenPopupOrderRepair}
