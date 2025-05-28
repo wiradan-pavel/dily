@@ -2,7 +2,10 @@
 import { useState } from "react";
 import { ArrowDownSvg, LocationSvg } from "../../svgs";
 import Popup from "./Popup";
-import { addOverflowHiddenToBody, getLocalStorageByKey } from "@/utils/common";
+import {
+  addOverflowHiddenToBody,
+  removeOverflowHiddenToBody,
+} from "@/utils/common";
 
 import styles from "./style.module.scss";
 
@@ -14,16 +17,19 @@ const Location = () => {
     addOverflowHiddenToBody();
   };
 
-  const city = getLocalStorageByKey("location");
+  const handleClosePopup = () => {
+    setOpenPopup(false);
+    removeOverflowHiddenToBody();
+  };
 
   return (
     <>
       <button className={styles.btn} onClick={hadnleOpenPopup}>
         <LocationSvg />
-        <span>{city === null ? "Москва" : city}</span>
+        <span>Москва</span>
         <ArrowDownSvg />
       </button>
-      {openPopup && <Popup setOpenPopup={setOpenPopup} />}
+      {openPopup && <Popup handleClosePopup={handleClosePopup} />}
     </>
   );
 };

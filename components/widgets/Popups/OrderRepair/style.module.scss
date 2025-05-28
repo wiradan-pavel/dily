@@ -14,6 +14,10 @@
     line-height: 120%;
     text-align: center;
     font-weight: 700;
+
+    @media (max-width: var.$sm) {
+      font-size: 22px;
+    }
   }
 
   &__form {
@@ -22,7 +26,7 @@
       row-gap: 20px;
 
       &__label {
-        @include mixins.flex(flex-start, flex-start, 5px);
+        @include mixins.flex(normal, flex-start, 5px);
         @include mixins.flex-direction-column();
         font-weight: 700;
         font-size: 14px;
@@ -31,8 +35,11 @@
           border: 1px solid var.$mediumGrey;
           border-radius: 10px;
           padding: 12px 15px;
-          width: 300px;
         }
+      }
+
+      @media (max-width: var.$sm) {
+        @include mixins.grid-col(repeat(1, 1fr), 20px);
       }
     }
 
@@ -54,7 +61,7 @@
     }
 
     &__send {
-      @include mixins.flex(center, space-between, 10px);
+      @include mixins.flex(normal, space-between, 10px);
 
       &__checkbox {
         @include mixins.flex(baseline, start, 10px);
@@ -85,6 +92,19 @@
           @include mixins.transform(scale(0.95));
         }
       }
+
+      @media (max-width: var.$sm) {
+        @include mixins.flex-direction-column();
+      }
     }
+  }
+
+  @media (max-width: var.$lg) {
+    padding: 30px 40px;
+  }
+
+  @media (max-width: var.$sm) {
+    padding: 20px 30px;
+    margin-top: 10px;
   }
 }

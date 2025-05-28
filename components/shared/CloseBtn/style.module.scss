@@ -1,3 +1,4 @@
+@use "../../../app/globalStyles/var";
 @use "../../../app/globalStyles/mixins";
 
 .btn {
@@ -11,5 +12,10 @@
 
   &:hover svg circle {
     opacity: 1;
+  }
+
+  @media (max-width: var.$lg) {
+    top: 10px;
+    right: 10px;
   }
 }

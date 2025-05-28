@@ -27,6 +27,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  padding: 10px;
   background-color: rgba($color: var.$darkGrey, $alpha: 0.5);
   @include mixins.flex(center, center, 0px);
 }

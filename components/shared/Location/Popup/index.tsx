@@ -2,14 +2,12 @@
 import { useState } from "react";
 import { Button } from "@/components/shared";
 import { DotOnMap, GreenDotOnMap, SearchSvg } from "@/components/svgs";
-import { removeOverflowHiddenToBody, setLocalStorage } from "@/utils/common";
-import { UseState } from "@/types/common";
 
 import data from "@/public/data/locations/locations.json";
 
 import styles from "./style.module.scss";
 
-const Popup = ({ setOpenPopup }: { setOpenPopup: UseState<boolean> }) => {
+const Popup = ({ handleClosePopup }: { handleClosePopup: () => void }) => {
   const [inputValue, setInputValue] = useState("Москва");
   const [activeBtn, setActiveBtn] = useState<0 | 1>(0);
 
@@ -18,9 +16,7 @@ const Popup = ({ setOpenPopup }: { setOpenPopup: UseState<boolean> }) => {
   };
 
   const saveLocation = () => {
-    setOpenPopup(false);
-    removeOverflowHiddenToBody();
-    setLocalStorage("location", inputValue);
+    handleClosePopup();
   };
 
   return (
