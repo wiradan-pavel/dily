@@ -1,4 +1,5 @@
-import Layout from './Layout';
-import PagesLayout from './PagesLayout';
+import Layout from "./Layout";
+import PagesLayout from "./PagesLayout";
+import StoreProvider from "./StoreProvider";
 
-export { Layout, PagesLayout };
+export { Layout, PagesLayout, StoreProvider };

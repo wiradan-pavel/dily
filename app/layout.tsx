@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PagesLayout } from "@/components/layouts";
+import { PagesLayout, StoreProvider } from "@/components/layouts";
 import "./globalStyles/globals.scss";
 
 export const metadata: Metadata = {
@@ -12,5 +12,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <PagesLayout>{children}</PagesLayout>;
+  return (
+    <StoreProvider>
+      <PagesLayout>{children}</PagesLayout>
+    </StoreProvider>
+  );
 }
