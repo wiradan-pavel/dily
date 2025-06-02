@@ -2,13 +2,18 @@
 import { useState } from "react";
 import { Button } from "@/components/shared";
 import { DotOnMap, GreenDotOnMap, SearchSvg } from "@/components/svgs";
+import { useAppDispatch, useAppSelector } from "@/lib/state/hooks";
+import { changeLocation } from "@/lib/state/location/locationSlice";
 
 import data from "@/public/data/locations/locations.json";
 
 import styles from "./style.module.scss";
 
 const Popup = ({ handleClosePopup }: { handleClosePopup: () => void }) => {
-  const [inputValue, setInputValue] = useState("Москва");
+  const location = useAppSelector((state) => state.location.value);
+  const locationDispatch = useAppDispatch();
+
+  const [inputValue, setInputValue] = useState(location);
   const [activeBtn, setActiveBtn] = useState<0 | 1>(0);
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,6 +22,7 @@ const Popup = ({ handleClosePopup }: { handleClosePopup: () => void }) => {
 
   const saveLocation = () => {
     handleClosePopup();
+    locationDispatch(changeLocation(inputValue));
   };
 
   return (

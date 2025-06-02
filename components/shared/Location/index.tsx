@@ -6,10 +6,13 @@ import {
   addOverflowHiddenToBody,
   removeOverflowHiddenToBody,
 } from "@/utils/common";
+import { useAppSelector } from "@/lib/state/hooks";
 
 import styles from "./style.module.scss";
 
 const Location = () => {
+  const location = useAppSelector((state) => state.location.value);
+
   const [openPopup, setOpenPopup] = useState(false);
 
   const hadnleOpenPopup = () => {
@@ -26,7 +29,7 @@ const Location = () => {
     <>
       <button className={styles.btn} onClick={hadnleOpenPopup}>
         <LocationSvg />
-        <span>Москва</span>
+        <span>{location}</span>
         <ArrowDownSvg />
       </button>
       {openPopup && <Popup handleClosePopup={handleClosePopup} />}
