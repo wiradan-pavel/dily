@@ -1,0 +1,107 @@
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
+
+.carousel {
+  padding: 80px 0 20px;
+  overflow: hidden;
+
+  @media (max-width: var.$lg) {
+    padding-top: 60px;
+  }
+}
+
+.list {
+  @include mixins.flex(center, flex-start, 30px);
+  padding: 0 30px;
+
+  &__item {
+    border-radius: 10px;
+    background-color: #fff;
+    @include mixins.box-shadow(
+      1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+    );
+    @include mixins.flex-item(0, 0, 40%);
+
+    &__charity,
+    &__delivery {
+      background-color: #01c65e;
+      color: #fff;
+    }
+
+    &__delivery {
+      background-color: var.$orangeLight;
+    }
+
+    &__sell_us span svg,
+    &__repair span svg {
+      border: 1px solid var.$greenBright;
+      border-radius: 50%;
+    }
+
+    & a {
+      position: relative;
+      display: block;
+      min-width: 570px;
+      height: 200px;
+      padding: 30px;
+
+      @media (max-width: var.$md) {
+        min-width: 450px;
+      }
+
+      @media (max-width: var.$sm) {
+        min-width: 300px;
+      }
+    }
+
+    &__content {
+      @include mixins.flex(normal, space-between, 10px);
+      @include mixins.flex-direction-column();
+      position: relative;
+      z-index: 2;
+      max-width: 350px;
+      height: 100%;
+
+      &__title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &__text {
+        padding-top: 15px;
+      }
+
+      &__btn svg {
+        @include mixins.flex(center, center, 0px);
+        @include mixins.transition(transform, 0.2s, ease-in-out);
+      }
+
+      @media (max-width: var.$md) {
+        max-width: 250px;
+      }
+    }
+
+    & img {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      border-radius: 0 10px 10px 0;
+
+      @media (max-width: var.$sm) {
+        opacity: 0.5;
+      }
+    }
+
+    &:hover {
+      & span svg {
+        @include mixins.transform(scale(1.2));
+      }
+    }
+  }
+
+  @media (max-width: var.$sm) {
+    gap: 10px;
+    padding: 0 10px;
+  }
+}

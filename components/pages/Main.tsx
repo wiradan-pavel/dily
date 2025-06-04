@@ -1,7 +1,9 @@
+import { Carousel } from "../widgets/MainPage";
+
 const Main = () => {
   return (
     <>
-      <h1>Main Page</h1>
+      <Carousel />
     </>
   );
 };

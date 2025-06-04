@@ -18,6 +18,16 @@
   flex-direction: column;
 }
 
+@mixin flex-item($grow, $shrink, $basis) {
+  -webkit-box-flex: $grow;
+  -ms-flex-positive: $grow;
+  flex-grow: $grow;
+  -ms-flex-negative: $shrink;
+  flex-shrink: $shrink;
+  -ms-flex-preferred-size: $basis;
+  flex-basis: $basis;
+}
+
 @mixin transition($property, $duration, $func) {
   -webkit-transition-property: $property;
   -o-transition-property: $property;
