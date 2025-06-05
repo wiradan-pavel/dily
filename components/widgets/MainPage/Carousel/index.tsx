@@ -10,7 +10,7 @@ import charityImg from "@/public/img/pages/main/charity.svg";
 import deliveryImg from "@/public/img/pages/main/delivery.svg";
 import repairImg from "@/public/img/pages/main/repair.svg";
 import saleUsImg from "@/public/img/pages/main/sale-us.svg";
-import { ArrowLeftBgWhite } from "@/components/svgs";
+import { ArrowLeftBgWhiteSvg } from "@/components/svgs";
 
 import data from "@/public/data/pages/main.json";
 
@@ -44,10 +44,11 @@ const Carousel = () => {
                 </p>
               </div>
               <span className={styles.list__item__content__btn}>
-                <ArrowLeftBgWhite />
+                <ArrowLeftBgWhiteSvg />
               </span>
             </div>
             <Image
+              loading="eager"
               alt="delivery image"
               src={deliveryImg}
               width={249}
@@ -68,11 +69,12 @@ const Carousel = () => {
                 </p>
               </div>
               <span className={styles.list__item__content__btn}>
-                <ArrowLeftBgWhite />
+                <ArrowLeftBgWhiteSvg />
               </span>
             </div>
             <Image
-              alt="charityImg"
+              loading="eager"
+              alt="repair image"
               src={repairImg}
               width={isMediaSM ? 300 : 331}
               height={200}
@@ -92,10 +94,16 @@ const Carousel = () => {
                 </p>
               </div>
               <span className={styles.list__item__content__btn}>
-                <ArrowLeftBgWhite />
+                <ArrowLeftBgWhiteSvg />
               </span>
             </div>
-            <Image alt="charityImg" src={charityImg} width={250} height={200} />
+            <Image
+              loading="eager"
+              alt="charity image"
+              src={charityImg}
+              width={250}
+              height={200}
+            />
           </Link>
         </li>
         {/* sell us */}
@@ -111,10 +119,16 @@ const Carousel = () => {
                 </p>
               </div>
               <span className={styles.list__item__content__btn}>
-                <ArrowLeftBgWhite />
+                <ArrowLeftBgWhiteSvg />
               </span>
             </div>
-            <Image alt="charityImg" src={saleUsImg} width={250} height={200} />
+            <Image
+              loading="eager"
+              alt="sale us image"
+              src={saleUsImg}
+              width={250}
+              height={200}
+            />
           </Link>
         </li>
       </ul>

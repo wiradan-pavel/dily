@@ -1,0 +1,129 @@
+@use "../../../app/globalStyles/var";
+@use "../../../app/globalStyles/mixins";
+
+.looking {
+  &__title {
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+
+    @media (max-width: var.$sm) {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    @include mixins.flex(flex-start, flex-start, 30px);
+    padding-top: 40px;
+
+    &__container {
+      overflow: hidden;
+    }
+
+    &__item {
+      @include mixins.flex-item(0, 0, 9%);
+
+      & a {
+        @include mixins.flex(center, center, 13px);
+        @include mixins.flex-direction-column();
+        text-align: center;
+
+        & span {
+          @include mixins.flex(center, center, 0px);
+          width: 95px;
+          height: 95px;
+          border-radius: 50%;
+          background-color: #fff;
+          @include mixins.box-shadow(
+            1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+          );
+
+          & img {
+            @media (max-width: var.$sm) {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          @media (max-width: var.$sm) {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        @media (max-width: var.$sm) {
+          font-size: 12px;
+          line-height: 120%;
+          gap: 8px;
+        }
+      }
+    }
+
+    @media (max-width: var.$sm) {
+      gap: 10px;
+      padding-top: 20px;
+    }
+  }
+
+  &__controls {
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    bottom: 85px;
+    border-radius: 50%;
+    @include mixins.transition(transform, 0.2s, ease-in-out);
+
+    &__prev {
+      left: -15px;
+      @include mixins.transform(rotate(180deg));
+
+      &:hover {
+        @include mixins.transform(scale(1.1) rotate(180deg));
+
+        @media (max-width: var.$sm) {
+          @include mixins.transform(scale(1) rotate(180deg));
+        }
+      }
+
+      &:active {
+        @include mixins.transform(scale(0.9) rotate(180deg));
+
+        @media (max-width: var.$sm) {
+          @include mixins.transform(scale(1) rotate(180deg));
+        }
+      }
+    }
+
+    &__next {
+      right: -15px;
+
+      &:hover {
+        @include mixins.transform(scale(1.1));
+
+        @media (max-width: var.$sm) {
+          @include mixins.transform(scale(1));
+        }
+      }
+
+      &:active {
+        @include mixins.transform(scale(0.9));
+
+        @media (max-width: var.$sm) {
+          @include mixins.transform(scale(1));
+        }
+      }
+    }
+
+    &:disabled svg circle {
+      fill: var.$mediumGrey;
+    }
+
+    @media (max-width: var.$sm) {
+      bottom: 50px;
+    }
+  }
+}
