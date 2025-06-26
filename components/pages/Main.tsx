@@ -1,11 +1,12 @@
-import { Carousel } from "../widgets/MainPage";
-import { Looking } from "../shared";
+import { Carousel, GoodsForYou } from "../widgets/MainPage";
+import { Looking } from "../widgets/Sections";
 
 const Main = () => {
   return (
     <>
       <Carousel />
       <Looking />
+      <GoodsForYou />
     </>
   );
 };

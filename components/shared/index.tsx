@@ -5,7 +5,7 @@ import Button from "./Button";
 import BurgerBtn from "./BurgerBtn";
 import CloseBtn from "./CloseBtn";
 import SocialList from "./SocialList";
-import Looking from "./Looking";
+import ProductCard from "./ProductCard";
 
 export {
   Logo,
@@ -15,5 +15,5 @@ export {
   BurgerBtn,
   CloseBtn,
   SocialList,
-  Looking,
+  ProductCard,
 };

@@ -23,3 +23,6 @@ export const setLocalStorage = (key: string, value: string) => {
 export const getLocalStorageByKey = (key: string) => {
   return typeof window !== "undefined" ? window.localStorage.getItem(key) : "";
 };
+
+export const addNumberSpaces = (number: number) =>
+  number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");

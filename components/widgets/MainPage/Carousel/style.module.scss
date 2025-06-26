@@ -2,7 +2,7 @@
 @use "../../../../app/globalStyles/mixins";
 
 .carousel {
-  padding: 80px 0 20px;
+  padding: 80px 0 30px;
   overflow: hidden;
 
   @media (max-width: var.$lg) {

@@ -1,3 +1,4 @@
 import Carousel from "./Carousel";
+import GoodsForYou from "./GoodsForYou";
 
-export { Carousel };
+export { Carousel, GoodsForYou };

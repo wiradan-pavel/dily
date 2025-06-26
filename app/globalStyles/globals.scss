@@ -37,3 +37,13 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @media (max-width: var.$sm) {
+    font-size: 24px;
+  }
+}

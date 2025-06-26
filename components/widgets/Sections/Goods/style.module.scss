@@ -1,0 +1,31 @@
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
+
+.goods {
+  &__top {
+    padding: 80px 0 30px;
+    @include mixins.flex(end, space-between, 10px);
+
+    &__link {
+      font-size: 14px;
+      opacity: 0.6;
+      @include mixins.transition(opacity, 0.2s, ease-in-out);
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__list {
+    @include mixins.flex(stretch, space-between, 10px);
+
+    @media (max-width: var.$sm) {
+      @include mixins.grid-col(repeat(2, 1fr), 10px);
+    }
+  }
+}

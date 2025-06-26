@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type LocationState = {
   value: string;
@@ -12,7 +12,7 @@ const locationSlice = createSlice({
   name: "location",
   initialState,
   reducers: {
-    changeLocation: (state, action) => {
+    changeLocation: (state, action: PayloadAction<string>) => {
       state.value = action.payload;
     },
   },

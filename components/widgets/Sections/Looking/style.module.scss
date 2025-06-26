@@ -1,17 +1,7 @@
-@use "../../../app/globalStyles/var";
-@use "../../../app/globalStyles/mixins";
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
 
 .looking {
-  &__title {
-    font-size: 32px;
-    line-height: 120%;
-    font-weight: 700;
-
-    @media (max-width: var.$sm) {
-      font-size: 24px;
-    }
-  }
-
   &__list {
     @include mixins.flex(flex-start, flex-start, 30px);
     padding-top: 40px;
@@ -78,7 +68,7 @@
     @include mixins.transition(transform, 0.2s, ease-in-out);
 
     &__prev {
-      left: -15px;
+      left: -10px;
       @include mixins.transform(rotate(180deg));
 
       &:hover {
@@ -99,7 +89,7 @@
     }
 
     &__next {
-      right: -15px;
+      right: -10px;
 
       &:hover {
         @include mixins.transform(scale(1.1));

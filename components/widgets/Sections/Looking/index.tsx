@@ -25,9 +25,9 @@ import serviceImg from "@/public/img/shared/looking/service.svg";
 import businessImg from "@/public/img/shared/looking/business.svg";
 import charityImg from "@/public/img/shared/looking/charity.svg";
 
-import styles from "./style.module.scss";
-
 import listData from "@/public/data/nav/menu/bulletin_menu.json";
+
+import styles from "./style.module.scss";
 
 const Looking = () => {
   const arrayImg = [
@@ -58,7 +58,7 @@ const Looking = () => {
   return (
     <section className={styles.looking}>
       <div className="container">
-        <h4 className={styles.looking__title}>Вы ищете:</h4>
+        <h4 className="title">Вы ищете:</h4>
         <div className={styles.looking__list__container} ref={emblaRef}>
           <ul className={styles.looking__list}>
             {listData.menu.map((item) => (

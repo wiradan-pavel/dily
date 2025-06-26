@@ -1,0 +1,120 @@
+@use "../../../app/globalStyles/var";
+@use "../../../app/globalStyles/mixins";
+
+.item {
+  position: relative;
+  border-radius: 8px;
+  width: 214px;
+  @include mixins.box-shadow(
+    1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+  );
+
+  &__link {
+    height: 100%;
+    @include mixins.flex(start, flex-start, 8px);
+    @include mixins.flex-direction-column();
+  }
+
+  &__like {
+    & svg {
+      position: absolute;
+      z-index: 10;
+      cursor: pointer;
+      top: 10px;
+      right: 15px;
+      opacity: 0;
+      @include mixins.transition(top opacity, 0.2s, ease-in-out);
+
+      & path {
+        stroke: var.$greenBright;
+      }
+
+      @media (max-width: var.$md) {
+        top: 2px;
+        right: 7px;
+        @include mixins.transform(scale(1.1));
+      }
+    }
+
+    &__active svg {
+      top: 15px;
+      opacity: 1;
+
+      & path {
+        fill: var.$greenBright;
+      }
+
+      @media (max-width: var.$md) {
+        top: 7px;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: fit-content;
+  }
+
+  &__info {
+    height: 100%;
+    @include mixins.flex(start, space-evenly, 4px);
+    @include mixins.flex-direction-column();
+  }
+
+  &__title,
+  &__price,
+  &__location {
+    padding: 0 15px;
+
+    @media (max-width: var.$md) {
+      font-size: 14px;
+      padding: 0 7px;
+    }
+  }
+
+  &__price {
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var.$greenBright;
+  }
+
+  &__location {
+    padding-bottom: 8px;
+    font-size: 12px;
+    line-height: 130%;
+    font-weight: 400;
+    color: var.$mediumGrey3;
+  }
+
+  &__seller {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    @include mixins.transition(transform, 0.2s, ease-in-out);
+
+    &:hover {
+      @include mixins.transform(scale(1.2));
+    }
+
+    @media (max-width: var.$md) {
+      bottom: 7px;
+      right: 7px;
+    }
+  }
+
+  &:hover svg {
+    top: 15px;
+    opacity: 1;
+
+    @media (max-width: var.$md) {
+      top: 7px;
+    }
+  }
+
+  @media (max-width: var.$sm) {
+    width: 100%;
+  }
+}
