@@ -104,6 +104,111 @@
         }
       },
       "isFromDily": false
+    },
+    {
+      "id": 6,
+      "category": "Electronics",
+      "createdAt": 1750954066177,
+      "title": "ASUS Zenbook",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/asus-zenbook_fgji8r.png",
+        "alt": "ASUS Zenbook"
+      },
+      "link": "#",
+      "price": 30000,
+      "location": "Москва",
+      "seller": {
+        "name": "Артур",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786478/artur_biueru.jpg",
+          "alt": "Артур"
+        }
+      },
+      "isFromDily": true
+    },
+    {
+      "id": 7,
+      "category": "Electronics",
+      "createdAt": 1750954066177,
+      "title": "Ноутбук HP",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/hp_zvuvuf.png",
+        "alt": "Ноутбук HP"
+      },
+      "link": "#",
+      "price": 25000,
+      "location": "Москва",
+      "seller": {
+        "name": "Павел",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786477/pavel_dveygs.jpg",
+          "alt": "Павел"
+        }
+      },
+      "isFromDily": true
+    },
+    {
+      "id": 8,
+      "category": "Electronics",
+      "createdAt": 1750954066190,
+      "title": "HUAWEI MateBook",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/huawei-matebook_cgxyqe.png",
+        "alt": "HUAWEI MateBook"
+      },
+      "link": "#",
+      "price": 49000,
+      "location": "Москва",
+      "seller": {
+        "name": "Антуан",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786480/antuan_bwbtki.jpg",
+          "alt": "Антуан"
+        }
+      },
+      "isFromDily": true
+    },
+    {
+      "id": 9,
+      "category": "Electronics",
+      "createdAt": 1750954066193,
+      "title": "Ноутбук HP 15s",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/hp-15s_dwblcm.png",
+        "alt": "Ноутбук HP 15s"
+      },
+      "link": "#",
+      "price": 27000,
+      "location": "Москва",
+      "seller": {
+        "name": "Александр",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786476/aleksandr_ckyedi.jpg",
+          "alt": "Александр"
+        }
+      },
+      "isFromDily": true
+    },
+    {
+      "id": 10,
+      "category": "Electronics",
+      "createdAt": 1750954066199,
+      "title": "Apple MacBook Air 13",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/apple-macbook-air-13_yjkpyf.png",
+        "alt": "Apple MacBook Air 13"
+      },
+      "link": "#",
+      "price": 110000,
+      "location": "Москва",
+      "seller": {
+        "name": "Лидия",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786479/lidia_nyy7nr.jpg",
+          "alt": "Лидия"
+        }
+      },
+      "isFromDily": true
     }
   ]
 }

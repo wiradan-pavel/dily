@@ -50,6 +50,7 @@ export interface IButtonProps {
 
 export interface ISectionGoodsProps {
   title: string;
+  isHaveLogo?: boolean;
   linkAll: {
     text: string;
     href: string;

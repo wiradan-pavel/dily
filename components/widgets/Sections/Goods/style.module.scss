@@ -6,6 +6,17 @@
     padding: 80px 0 30px;
     @include mixins.flex(end, space-between, 10px);
 
+    &__title {
+      @include mixins.flex(end, flex-start, 10px);
+
+      & svg {
+        @media (max-width: var.$sm) {
+          width: 50px;
+          height: fit-content;
+        }
+      }
+    }
+
     &__link {
       font-size: 14px;
       opacity: 0.6;
