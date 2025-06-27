@@ -12,8 +12,7 @@ export type CategoryType =
   | "RealEstate"
   | "Job"
   | "Services"
-  | "ForBusiness"
-  | "Free";
+  | "ForBusiness";
 
 export interface IImg {
   url: string;
@@ -51,6 +50,7 @@ export interface IButtonProps {
 export interface ISectionGoodsProps {
   title: string;
   isHaveLogo?: boolean;
+  titleIsGreen?: boolean;
   linkAll: {
     text: string;
     href: string;

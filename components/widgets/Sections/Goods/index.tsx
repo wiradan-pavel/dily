@@ -7,14 +7,24 @@ import { ISectionGoodsProps } from "@/types/props";
 
 import style from "./style.module.scss";
 
-const Goods = ({ title, isHaveLogo, linkAll, list }: ISectionGoodsProps) => {
+const Goods = ({
+  title,
+  isHaveLogo,
+  titleIsGreen,
+  linkAll,
+  list,
+}: ISectionGoodsProps) => {
   const isMediaSM = useMediaQuery(576);
 
   return (
     <section>
       <div className="container">
         <div className={style.goods__top}>
-          <h4 className={`title ${style.goods__top__title}`}>
+          <h4
+            className={`title ${style.goods__top__title} ${
+              titleIsGreen && style.goods__top__title__green
+            }`}
+          >
             {title} {isHaveLogo && <DilyLogoSvg />}
           </h4>
           {!isMediaSM && (

@@ -9,6 +9,10 @@
     &__title {
       @include mixins.flex(end, flex-start, 10px);
 
+      &__green {
+        color: var.$greenBright;
+      }
+
       & svg {
         @media (max-width: var.$sm) {
           width: 50px;
@@ -29,6 +33,10 @@
       &:active {
         opacity: 0.6;
       }
+    }
+
+    @media (max-width: var.$md) {
+      padding: 60px 0 20px;
     }
   }
 

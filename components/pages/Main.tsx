@@ -1,6 +1,7 @@
 import {
   Carousel,
   GoodsActual,
+  GoodsForFree,
   GoodsForYou,
   GoodsFromDily,
 } from "../widgets/MainPage";
@@ -14,6 +15,7 @@ const Main = () => {
       <GoodsForYou />
       <GoodsFromDily />
       <GoodsActual />
+      <GoodsForFree />
     </>
   );
 };

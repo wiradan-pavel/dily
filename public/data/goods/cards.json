@@ -314,6 +314,111 @@
         }
       },
       "isFromDily": false
+    },
+    {
+      "id": 16,
+      "category": "Animals",
+      "createdAt": 1750783893953,
+      "title": "Кошка шотландская",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751046890/cat_mpyk42.jpg",
+        "alt": "Кошка шотландская"
+      },
+      "link": "#",
+      "price": 0,
+      "location": "Москва",
+      "seller": {
+        "name": "Александр",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786476/aleksandr_ckyedi.jpg",
+          "alt": "Александр"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 17,
+      "category": "Animals",
+      "createdAt": 1750785893975,
+      "title": "Щенок в добрые руки",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751046890/dog_gojpxt.jpg",
+        "alt": "Щенок в добрые руки"
+      },
+      "link": "#",
+      "price": 0,
+      "location": "Москва",
+      "seller": {
+        "name": "Михаил",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786481/mihail_ffs7yi.jpg",
+          "alt": "Михаил"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 18,
+      "category": "HobbiesAndRecreation",
+      "createdAt": 1750787236060,
+      "title": "Книги даром",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751046890/books_sjzcrb.jpg",
+        "alt": "Книги даром"
+      },
+      "link": "#",
+      "price": 0,
+      "location": "Москва",
+      "seller": {
+        "name": "Антуан",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786480/antuan_bwbtki.jpg",
+          "alt": "Антуан"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 19,
+      "category": "ProductsForChildren",
+      "createdAt": 1750787327475,
+      "title": "Детсие игрушки",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751046890/toys_cdzwwj.jpg",
+        "alt": "Детсие игрушки"
+      },
+      "link": "#",
+      "price": 0,
+      "location": "Москва",
+      "seller": {
+        "name": "Павел",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786477/pavel_dveygs.jpg",
+          "alt": "Павел"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 20,
+      "category": "HobbiesAndRecreation",
+      "createdAt": 1750787471227,
+      "title": "Краски акварельные",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751046890/paints_wwmj86.jpg",
+        "alt": "Краски акварельные"
+      },
+      "link": "#",
+      "price": 0,
+      "location": "Москва",
+      "seller": {
+        "name": "Антон",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786477/anton_mc9jsn.jpg",
+          "alt": "Антон"
+        }
+      },
+      "isFromDily": false
     }
   ]
 }
