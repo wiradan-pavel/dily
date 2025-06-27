@@ -209,6 +209,111 @@
         }
       },
       "isFromDily": true
+    },
+    {
+      "id": 11,
+      "category": "HouseholdAppliances",
+      "createdAt": 1750957382110,
+      "title": "Робот-пылесос",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750957651/robot-pilesosjpg_f53ab7.jpg",
+        "alt": "Робот-пылесос"
+      },
+      "link": "#",
+      "price": 6990,
+      "location": "Москва",
+      "seller": {
+        "name": "Артур",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786478/artur_biueru.jpg",
+          "alt": "Артур"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 12,
+      "category": "HouseholdAppliances",
+      "createdAt": 1750957382110,
+      "title": "Пылесос Scarlett",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750957651/pilesos-scarlet_k7ndde.png",
+        "alt": "Пылесос Scarlett"
+      },
+      "link": "#",
+      "price": 3990,
+      "location": "Москва",
+      "seller": {
+        "name": "Павел",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786477/pavel_dveygs.jpg",
+          "alt": "Павел"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 13,
+      "category": "HouseholdAppliances",
+      "createdAt": 1750957382110,
+      "title": "Пылесос Kitfort",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750957651/pilesos-kitfort_tg3y1s.png",
+        "alt": "Пылесос Kitfort"
+      },
+      "link": "#",
+      "price": 7490,
+      "location": "Москва",
+      "seller": {
+        "name": "Антуан",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786480/antuan_bwbtki.jpg",
+          "alt": "Антуан"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 14,
+      "category": "HouseholdAppliances",
+      "createdAt": 1750957382110,
+      "title": "Пылесос Xiaomi Dreame",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750957652/pilesos-xiaomi-dreame_gbuhw3.png",
+        "alt": "Пылесос Xiaomi Dreame"
+      },
+      "link": "#",
+      "price": 9990,
+      "location": "Москва",
+      "seller": {
+        "name": "Александр",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786476/aleksandr_ckyedi.jpg",
+          "alt": "Александр"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 15,
+      "category": "HouseholdAppliances",
+      "createdAt": 1750957382110,
+      "title": "Пылесос Miele",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750957652/pilesos-miele_wgdref.png",
+        "alt": "Пылесос Miele"
+      },
+      "link": "#",
+      "price": 10000,
+      "location": "Москва",
+      "seller": {
+        "name": "Лидия",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786479/lidia_nyy7nr.jpg",
+          "alt": "Лидия"
+        }
+      },
+      "isFromDily": false
     }
   ]
 }
