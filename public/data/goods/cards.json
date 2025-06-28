@@ -419,6 +419,50 @@
         }
       },
       "isFromDily": false
+    },
+    {
+      "id": 21,
+      "category": "Electronics",
+      "createdAt": 1750954066199,
+      "title": "Apple MacBook Air 13",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/apple-macbook-air-13_yjkpyf.png",
+        "alt": "Apple MacBook Air 13"
+      },
+      "link": "#",
+      "price": 110000,
+      "discountPrice": 89000,
+      "location": "Москва",
+      "seller": {
+        "name": "Лидия",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786479/lidia_nyy7nr.jpg",
+          "alt": "Лидия"
+        }
+      },
+      "isFromDily": false
+    },
+    {
+      "id": 22,
+      "category": "Electronics",
+      "createdAt": 1750954066199,
+      "title": "Apple MacBook Air 14",
+      "img": {
+        "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750954269/apple-macbook-air-13_yjkpyf.png",
+        "alt": "Apple MacBook Air 14"
+      },
+      "link": "#",
+      "price": 110000,
+      "discountPrice": 39000,
+      "location": "Москва",
+      "seller": {
+        "name": "Лидия",
+        "img": {
+          "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1750786479/lidia_nyy7nr.jpg",
+          "alt": "Лидия"
+        }
+      },
+      "isFromDily": false
     }
   ]
 }

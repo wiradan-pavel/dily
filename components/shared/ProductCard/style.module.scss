@@ -77,6 +77,13 @@
     letter-spacing: 0.5px;
     font-weight: 700;
     color: var.$greenBright;
+    @include mixins.flex(center, center, 8px);
+
+    &__wrong {
+      color: var.$mediumGrey3;
+      text-decoration: line-through;
+      font-size: 12px;
+    }
   }
 
   &__location {

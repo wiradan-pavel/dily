@@ -1,7 +1,15 @@
+import BenefitBanners from "./BenefitBanners";
 import Carousel from "./Carousel";
 import GoodsActual from "./GoodsActual";
 import GoodsForFree from "./GoodsForFree";
 import GoodsForYou from "./GoodsForYou";
 import GoodsFromDily from "./GoodsFromDily";
 
-export { Carousel, GoodsForYou, GoodsFromDily, GoodsActual, GoodsForFree };
+export {
+  Carousel,
+  GoodsForYou,
+  GoodsFromDily,
+  GoodsActual,
+  GoodsForFree,
+  BenefitBanners,
+};

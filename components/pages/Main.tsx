@@ -1,4 +1,5 @@
 import {
+  BenefitBanners,
   Carousel,
   GoodsActual,
   GoodsForFree,
@@ -14,6 +15,7 @@ const Main = () => {
       <Looking />
       <GoodsForYou />
       <GoodsFromDily />
+      <BenefitBanners />
       <GoodsActual />
       <GoodsForFree />
     </>

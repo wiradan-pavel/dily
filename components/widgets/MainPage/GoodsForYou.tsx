@@ -2,9 +2,12 @@
 import { Goods } from "../Sections";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
+import data from "@/public/data/pages/main.json";
 import goodsData from "@/public/data/goods/cards.json";
 
 const GoodsForYou = () => {
+  const forYouData = data["goods-sections"]["for-you"];
+
   const isMediaMD = useMediaQuery(768);
   const countCards = isMediaMD ? 4 : 5;
 
@@ -14,8 +17,11 @@ const GoodsForYou = () => {
 
   return (
     <Goods
-      title="Подборка для вас"
-      linkAll={{ text: "Смотреть все", href: "#" }}
+      title={forYouData.title}
+      linkAll={{
+        text: forYouData["link-all"].text,
+        href: forYouData["link-all"].href,
+      }}
       list={listGoodsForYou}
     />
   );

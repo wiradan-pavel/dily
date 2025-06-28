@@ -27,6 +27,7 @@ export interface IItem {
   img: IImg;
   link: string;
   price: number;
+  discountPrice?: number;
   location: string;
   seller: {
     name: string;

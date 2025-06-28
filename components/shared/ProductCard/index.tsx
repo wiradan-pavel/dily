@@ -36,7 +36,18 @@ const ProductCard = ({ item }: { item: IItem }) => {
         />
         <div className={style.item__info}>
           <h6 className={style.item__title}>{item.title}</h6>
-          <p className={style.item__price}>{addNumberSpaces(item.price)} ₽</p>
+          <p className={style.item__price}>
+            <span
+              className={`${
+                item.discountPrice !== undefined && style.item__price__wrong
+              }`}
+            >
+              {addNumberSpaces(item.price)}₽
+            </span>
+            {item.discountPrice !== undefined && (
+              <span>{addNumberSpaces(item.discountPrice)}₽</span>
+            )}
+          </p>
           <p className={style.item__location}>{item.location}</p>
         </div>
         <CldImage
