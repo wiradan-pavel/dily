@@ -5,6 +5,7 @@ import {
   GoodsForFree,
   GoodsForYou,
   GoodsFromDily,
+  SelectionBanners,
 } from "../widgets/MainPage";
 import { Looking } from "../widgets/Sections";
 
@@ -18,6 +19,7 @@ const Main = () => {
       <BenefitBanners />
       <GoodsActual />
       <GoodsForFree />
+      <SelectionBanners />
     </>
   );
 };

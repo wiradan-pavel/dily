@@ -1,0 +1,195 @@
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
+
+.banners {
+  @include mixins.flex(stretch, space-between, 10px);
+  padding-top: 80px;
+
+  &__left,
+  &__right {
+    position: relative;
+    width: 550px;
+    height: 170px;
+    padding: 30px;
+    border-radius: 10px;
+    @include mixins.box-shadow(
+      1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+    );
+
+    @media (max-width: var.$md) {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    background-color: var.$greenBright;
+    color: #fff;
+
+    &__title {
+      position: relative;
+      z-index: 5;
+      //   media: 992 - 320, font-size: 28 - 22
+      font-size: clamp(1.375rem, 1.196rem + 0.89vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    &__subtitle {
+      position: relative;
+      z-index: 5;
+      //   media: 992 - 320, font-size: 24 - 20
+      font-size: clamp(1.25rem, 1.131rem + 0.6vw, 1.5rem);
+      font-weight: 700;
+      //   media: 992 - 320, padding-right: 55 - 10
+      padding: 10px 0 0 clamp(0.625rem, -0.714rem + 6.7vw, 3.438rem);
+    }
+
+    &__img {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      right: 25px;
+
+      &__bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+    }
+
+    &__percent {
+      position: absolute;
+      z-index: 2;
+      background-color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      @include mixins.flex(center, center, 0px);
+      @include mixins.box-shadow(
+        1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+      );
+      @include mixins.transition(left right transform, 0.5s, ease-in-out);
+
+      &__30,
+      &__40 {
+        color: var.$greenBright;
+      }
+
+      &__30 {
+        bottom: 12px;
+        left: 40%;
+        width: 37px;
+        height: 37px;
+        font-size: 16px;
+        @include mixins.transform(rotate(7deg));
+
+        & span {
+          font-size: 12px;
+          padding-top: 3px;
+        }
+      }
+
+      &__40 {
+        top: 15px;
+        right: 35%;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        @include mixins.transform(rotate(-15deg));
+
+        & span {
+          font-size: 15px;
+          padding-top: 3px;
+        }
+      }
+
+      &__60 {
+        color: var.$orangeBright;
+        bottom: 23px;
+        right: 21px;
+        width: 77px;
+        height: 77px;
+        font-size: 34px;
+        @include mixins.transform(rotate(15deg));
+
+        & span {
+          font-size: 24px;
+          padding-top: 3px;
+        }
+      }
+    }
+
+    &:hover {
+      .banners__left__percent__30 {
+        left: 45%;
+        @include mixins.transform(rotate(-7deg));
+      }
+
+      .banners__left__percent__40 {
+        right: 40%;
+        @include mixins.transform(rotate(15deg));
+      }
+
+      .banners__left__percent__60 {
+        @include mixins.transform(scale(0.9) rotate(-15deg));
+      }
+    }
+  }
+
+  &__right {
+    &__title {
+      position: relative;
+      z-index: 5;
+      //   media: 992 - 320, font-size: 22 - 18
+      font-size: clamp(1.125rem, 1.006rem + 0.6vw, 1.375rem);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 150%;
+      max-width: 390px;
+      padding-bottom: 10px;
+    }
+
+    & svg {
+      position: relative;
+      z-index: 5;
+      border: 1px solid var.$greenBright;
+      border-radius: 50%;
+      @include mixins.transition(transform, 0.2s, ease-in-out);
+
+      & circle {
+        fill: transparent;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      right: 0;
+
+      &__bg {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        border-radius: 0 0 0 10px;
+      }
+
+      @media (max-width: var.$sm) {
+        width: 270px;
+      }
+    }
+
+    &:hover svg {
+      @include mixins.transform(scale(1.15));
+    }
+  }
+
+  @media (max-width: var.$md) {
+    @include mixins.flex-direction-column();
+  }
+
+  @media (max-width: var.$sm) {
+    padding-top: 60px;
+  }
+}

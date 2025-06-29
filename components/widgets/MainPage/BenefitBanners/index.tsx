@@ -26,7 +26,7 @@ const BenefitBanners = () => {
     )
     .splice(0, 1);
 
-  const procent =
+  const percent =
     100 - (discountProduct[0].discountPrice / discountProduct[0].price) * 100;
 
   return (
@@ -57,7 +57,7 @@ const BenefitBanners = () => {
             <ul className={style.discount__card}>
               <div className={style.discount__card__procent}>
                 <p>
-                  {Math.round(procent)}
+                  {Math.round(percent)}
                   <span>%</span>
                 </p>
               </div>
