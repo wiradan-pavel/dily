@@ -1,6 +1,6 @@
-import { IButtonProps } from '@/types/props';
+import { IButtonProps } from "@/types/props";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
 const Button = ({
   children,
@@ -22,10 +22,10 @@ const Button = ({
         paddingBottom: paddingY,
         paddingLeft: paddingX,
         paddingRight: paddingX,
-        borderRadius: borderRadius + 'px',
+        borderRadius: borderRadius + "px",
       }}
-      className={`${styles.btn} ${style === 'green' && styles.btn__green} ${
-        style === 'white' && styles.btn__white
+      className={`${styles.btn} ${style === "green" && styles.btn__green} ${
+        style === "white" && styles.btn__white
       } ${isShadow && styles.btn__shadow}`}
     >
       {text}

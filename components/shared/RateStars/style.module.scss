@@ -1,0 +1,5 @@
+@use "../../../app/globalStyles/mixins";
+
+.stars {
+  @include mixins.flex(center, flex-start, 2px);
+}

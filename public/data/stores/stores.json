@@ -1,0 +1,546 @@
+[
+  {
+    "id": 1,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282425/igrolend_plqzpr.svg",
+      "alt": "ИГРОЛЭНД"
+    },
+    "name": "ИГРОЛЭНД",
+    "subscribers": 1000,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "white",
+      "textColor": "orange",
+      "styleBtns": "green"
+    }
+  },
+  {
+    "id": 2,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282425/organicshop_sbypu4.svg",
+      "alt": "ОРГАНИК ШОП"
+    },
+    "name": "ОРГАНИК ШОП",
+    "subscribers": 500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "green",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 3,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/xiaomi_xzpg88.svg",
+      "alt": "XIAOMI"
+    },
+    "name": "XIAOMI",
+    "subscribers": 2000,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "green",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 4,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/divanitut_bsg03h.svg",
+      "alt": "ДИВАНЫ ТУТ"
+    },
+    "name": "ДИВАНЫ ТУТ",
+    "subscribers": 1000,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "turquoise",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 5,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/kotobormot_i7ryk4.svg",
+      "alt": "КОТ-ОБОРМОТ"
+    },
+    "name": "КОТ-ОБОРМОТ",
+    "subscribers": 1500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "orange",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 6,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/letual_odhdui.svg",
+      "alt": "Л’ЭТУАЛЬ"
+    },
+    "name": "Л’ЭТУАЛЬ",
+    "subscribers": 2700,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "blue",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 7,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282423/knigiru_wpwpq6.svg",
+      "alt": "КНИГИ.РУ"
+    },
+    "name": "КНИГИ.РУ",
+    "subscribers": 4000,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "orange",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 8,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282423/mvideo_pc9q9l.svg",
+      "alt": "М-ВИДЕО"
+    },
+    "name": "М-ВИДЕО",
+    "subscribers": 14500,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "red",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 9,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/topshina_t3io33.svg",
+      "alt": "ТОП ШИНА"
+    },
+    "name": "ТОП ШИНА",
+    "subscribers": 1000,
+    "rate": 3,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "white",
+      "textColor": "black",
+      "styleBtns": "green"
+    }
+  },
+  {
+    "id": 10,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/automir_ohorlz.svg",
+      "alt": "АВТОМИР"
+    },
+    "name": "АВТОМИР",
+    "subscribers": 10000,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "white",
+      "textColor": "black",
+      "styleBtns": "green"
+    }
+  },
+  {
+    "id": 11,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/podarki_jfcuiv.svg",
+      "alt": "ПОДАРКИ"
+    },
+    "name": "ПОДАРКИ",
+    "subscribers": 13500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "red",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 12,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282421/velomir_nhzjmn.svg",
+      "alt": "ВЕЛОМИР"
+    },
+    "name": "ВЕЛОМИР",
+    "subscribers": 700,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "yellow",
+      "textColor": "black",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 13,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/childmir_nb06de.svg",
+      "alt": "ДЕТСКИЙ МИР"
+    },
+    "name": "ДЕТСКИЙ МИР",
+    "subscribers": 14500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "blue",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 14,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282421/ecolife_jgl8ll.svg",
+      "alt": "ЭКОЛАЙФ"
+    },
+    "name": "ЭКОЛАЙФ",
+    "subscribers": 10000,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "green",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 15,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282421/superbaik_ihmpgu.svg",
+      "alt": "СУПЕР БАЙК"
+    },
+    "name": "СУПЕР БАЙК",
+    "subscribers": 3000,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "grey",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 16,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282420/aurora_p9pi2r.svg",
+      "alt": "АВРОРА"
+    },
+    "name": "АВРОРА",
+    "subscribers": 33500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "blue",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 17,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282420/220volt_zdoel2.svg",
+      "alt": "220 ВОЛЬТ"
+    },
+    "name": "220 ВОЛЬТ",
+    "subscribers": 1700,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "orange",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 18,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282425/igrolend_plqzpr.svg",
+      "alt": "ИГРОЛЭНД"
+    },
+    "name": "ИГРОЛЭНД",
+    "subscribers": 1000,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "white",
+      "textColor": "orange",
+      "styleBtns": "green"
+    }
+  },
+  {
+    "id": 19,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282425/organicshop_sbypu4.svg",
+      "alt": "ОРГАНИК ШОП"
+    },
+    "name": "ОРГАНИК ШОП",
+    "subscribers": 500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "green",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 20,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/xiaomi_xzpg88.svg",
+      "alt": "XIAOMI"
+    },
+    "name": "XIAOMI",
+    "subscribers": 1000,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "green",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 21,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/divanitut_bsg03h.svg",
+      "alt": "ДИВАНЫ ТУТ"
+    },
+    "name": "ДИВАНЫ ТУТ",
+    "subscribers": 1000,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "turquoise",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 22,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/kotobormot_i7ryk4.svg",
+      "alt": "КОТ-ОБОРМОТ"
+    },
+    "name": "КОТ-ОБОРМОТ",
+    "subscribers": 1500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "orange",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 23,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282424/letual_odhdui.svg",
+      "alt": "Л’ЭТУАЛЬ"
+    },
+    "name": "Л’ЭТУАЛЬ",
+    "subscribers": 100,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "blue",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 24,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282423/knigiru_wpwpq6.svg",
+      "alt": "КНИГИ.РУ"
+    },
+    "name": "КНИГИ.РУ",
+    "subscribers": 900,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "orange",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 25,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282423/mvideo_pc9q9l.svg",
+      "alt": "М-ВИДЕО"
+    },
+    "name": "М-ВИДЕО",
+    "subscribers": 600,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "red",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 26,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/topshina_t3io33.svg",
+      "alt": "ТОП ШИНА"
+    },
+    "name": "ТОП ШИНА",
+    "subscribers": 1000,
+    "rate": 3,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "white",
+      "textColor": "black",
+      "styleBtns": "green"
+    }
+  },
+  {
+    "id": 27,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/automir_ohorlz.svg",
+      "alt": "АВТОМИР"
+    },
+    "name": "АВТОМИР",
+    "subscribers": 900,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "white",
+      "textColor": "black",
+      "styleBtns": "green"
+    }
+  },
+  {
+    "id": 28,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/podarki_jfcuiv.svg",
+      "alt": "ПОДАРКИ"
+    },
+    "name": "ПОДАРКИ",
+    "subscribers": 200,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "red",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 29,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282421/velomir_nhzjmn.svg",
+      "alt": "ВЕЛОМИР"
+    },
+    "name": "ВЕЛОМИР",
+    "subscribers": 700,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "yellow",
+      "textColor": "black",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 30,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282422/childmir_nb06de.svg",
+      "alt": "ДЕТСКИЙ МИР"
+    },
+    "name": "ДЕТСКИЙ МИР",
+    "subscribers": 200,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "blue",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 31,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282421/ecolife_jgl8ll.svg",
+      "alt": "ЭКОЛАЙФ"
+    },
+    "name": "ЭКОЛАЙФ",
+    "subscribers": 100,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "green",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 32,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282421/superbaik_ihmpgu.svg",
+      "alt": "СУПЕР БАЙК"
+    },
+    "name": "СУПЕР БАЙК",
+    "subscribers": 300,
+    "rate": 4,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "grey",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 33,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282420/aurora_p9pi2r.svg",
+      "alt": "АВРОРА"
+    },
+    "name": "АВРОРА",
+    "subscribers": 500,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "blue",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  },
+  {
+    "id": 34,
+    "img": {
+      "url": "https://res.cloudinary.com/djrlox8kv/image/upload/v1751282420/220volt_zdoel2.svg",
+      "alt": "220 ВОЛЬТ"
+    },
+    "name": "220 ВОЛЬТ",
+    "subscribers": 700,
+    "rate": 5,
+    "location": "Москва",
+    "styles": {
+      "bgColor": "orange",
+      "textColor": "white",
+      "styleBtns": "white"
+    }
+  }
+]

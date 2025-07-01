@@ -1,0 +1,131 @@
+@use "../../../app/globalStyles/var";
+@use "../../../app/globalStyles/mixins";
+
+.item {
+  &__link {
+    @include mixins.flex(stretch, space-between, 5px);
+    @include mixins.flex-direction-column();
+    padding: 15px 15px 20px 15px;
+    width: 214px;
+    height: 150px;
+    border-radius: 10px;
+    @include mixins.box-shadow(
+      1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+    );
+    @include mixins.transition(transform, 0.2s, ease-in-out);
+
+    &__red {
+      background-color: #f5253a;
+    }
+
+    &__white {
+      background-color: #fff;
+    }
+
+    &__grey {
+      background-color: #9cacab;
+    }
+
+    &__orange {
+      background-color: #fc9024;
+    }
+
+    &__green {
+      background-color: #00c65e;
+    }
+
+    &__yellow {
+      background-color: #ffee53;
+    }
+
+    &__blue {
+      background-color: #01c1fb;
+    }
+
+    &__turquoise {
+      background-color: #1eae8b;
+    }
+
+    &:hover {
+      @include mixins.transform(scale(1.03));
+    }
+  }
+
+  &__top {
+    @include mixins.flex(center, flex-start, 8px);
+
+    & img {
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 150%;
+
+      &__white {
+        color: #fff;
+      }
+
+      &__black {
+        color: #363a45;
+      }
+
+      &__orange {
+        color: #f89358;
+      }
+    }
+  }
+
+  &__bottom {
+    @include mixins.flex(stretch, space-between, 5px);
+
+    &__rate {
+      @include mixins.flex(center, flex-start, 5px);
+      background-color: #9daedc;
+      border-radius: 10px;
+      padding: 10px 11px;
+      font-size: 14px;
+    }
+
+    &__location {
+      padding: 12px;
+      border-radius: 10px;
+      background-color: #9daedc;
+      font-size: 12px;
+    }
+
+    &__white {
+      & div,
+      & p {
+        background-color: #fff;
+      }
+
+      & div {
+        color: #00c65e;
+      }
+
+      & p {
+        color: #363a45;
+      }
+    }
+
+    &__green {
+      & div,
+      & p {
+        background-color: #00c65e;
+        color: #fff;
+      }
+
+      & {
+        & svg path {
+          fill: #fff;
+        }
+        & span svg path {
+          stroke: #fff;
+          fill: #00c65e;
+        }
+      }
+    }
+  }
+}

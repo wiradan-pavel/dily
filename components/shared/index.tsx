@@ -6,6 +6,8 @@ import BurgerBtn from "./BurgerBtn";
 import CloseBtn from "./CloseBtn";
 import SocialList from "./SocialList";
 import ProductCard from "./ProductCard";
+import StoreCard from "./StoreCard";
+import RateStars from "./RateStars";
 
 export {
   Logo,
@@ -16,4 +18,6 @@ export {
   CloseBtn,
   SocialList,
   ProductCard,
+  StoreCard,
+  RateStars,
 };

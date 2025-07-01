@@ -7,7 +7,7 @@ import {
   GoodsFromDily,
   SelectionBanners,
 } from "../widgets/MainPage";
-import { Looking } from "../widgets/Sections";
+import { Looking, PopularStores } from "../widgets/Sections";
 
 const Main = () => {
   return (
@@ -20,6 +20,7 @@ const Main = () => {
       <GoodsActual />
       <GoodsForFree />
       <SelectionBanners />
+      <PopularStores />
     </>
   );
 };
