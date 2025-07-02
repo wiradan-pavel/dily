@@ -6,6 +6,7 @@ import {
   GoodsForYou,
   GoodsFromDily,
   SelectionBanners,
+  SellUsWrapper,
 } from "../widgets/MainPage";
 import { Looking, PopularStores } from "../widgets/Sections";
 
@@ -21,6 +22,7 @@ const Main = () => {
       <GoodsForFree />
       <SelectionBanners />
       <PopularStores />
+      <SellUsWrapper />
     </>
   );
 };

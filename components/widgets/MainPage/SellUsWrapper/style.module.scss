@@ -1,0 +1,9 @@
+@use "../../../../app/globalStyles/mixins";
+
+.wrapper {
+  padding: 20px 30px;
+  border-radius: 10px;
+  @include mixins.box-shadow(
+    1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
+  );
+}

@@ -3,6 +3,7 @@
 
 .stores {
   padding-top: 80px;
+  padding-bottom: 50px;
 
   &__top {
     @include mixins.flex(end, space-between, 10px);

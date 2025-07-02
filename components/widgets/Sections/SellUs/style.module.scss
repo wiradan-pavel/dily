@@ -1,0 +1,37 @@
+@use "../../../../app/globalStyles/var";
+@use "../../../../app/globalStyles/mixins";
+
+.sell {
+  max-width: 1110px;
+
+  &__title {
+    padding-bottom: 15px;
+
+    @media (max-width: var.$lg) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @include mixins.flex(center, space-between, 10px);
+
+    &__item {
+      @include mixins.flex(center, space-between, 20px);
+
+      &__number {
+        font-weight: 700;
+        font-size: 30px;
+        color: var.$greenBright;
+      }
+
+      &__text {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    @media (max-width: var.$lg) {
+      @include mixins.flex-direction-column();
+    }
+  }
+}

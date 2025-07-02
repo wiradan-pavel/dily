@@ -5,6 +5,7 @@ import GoodsForFree from "./GoodsForFree";
 import GoodsForYou from "./GoodsForYou";
 import GoodsFromDily from "./GoodsFromDily";
 import SelectionBanners from "./SelectionBanners";
+import SellUsWrapper from "./SellUsWrapper";
 
 export {
   Carousel,
@@ -14,4 +15,5 @@ export {
   GoodsForFree,
   BenefitBanners,
   SelectionBanners,
+  SellUsWrapper,
 };

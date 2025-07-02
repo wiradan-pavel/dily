@@ -88,3 +88,9 @@ export interface IItemStore {
     styleBtns: string;
   };
 }
+
+export interface IItemSellUsSection {
+  id: number;
+  text: string;
+  img: IImg;
+}
