@@ -1,0 +1,5 @@
+.accordion {
+  // media 992 - 576, pt - 100 - 50, pb - 90 - 40
+  padding: clamp(3.125rem, -1.202rem + 12.02vw, 6.25rem) 0
+    clamp(2.5rem, -1.827rem + 12.02vw, 5.625rem);
+}

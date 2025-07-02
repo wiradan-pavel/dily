@@ -1,0 +1,55 @@
+@use "../../../app/globalStyles/var";
+@use "../../../app/globalStyles/mixins";
+
+.text,
+.accordion__btn {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 400;
+  color: #818187;
+  padding: 4px 0;
+}
+
+.accordion {
+  &__show {
+    & p:first-child {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+
+  &__hidden {
+    overflow: hidden;
+    @include mixins.transition(max-height, 0.2s, ease-in-out);
+  }
+
+  &__btn {
+    @include mixins.flex(center, flex-start, 40px);
+    text-decoration: underline;
+    padding: 10px 0;
+    @include mixins.transition(color, 0.2s, ease-in-out);
+
+    &__arrow {
+      & svg {
+        @include mixins.transition(transform, 0.2s, ease-in-out);
+
+        & path {
+          @include mixins.transition(fill, 0.2s, ease-in-out);
+          fill: #818187;
+        }
+      }
+
+      &__active svg {
+        @include mixins.transform(rotate(180deg));
+      }
+    }
+
+    &:hover {
+      color: var.$darkGrey;
+
+      & svg path {
+        fill: var.$darkGrey;
+      }
+    }
+  }
+}

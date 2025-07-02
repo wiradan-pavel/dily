@@ -8,6 +8,7 @@ import SocialList from "./SocialList";
 import ProductCard from "./ProductCard";
 import StoreCard from "./StoreCard";
 import RateStars from "./RateStars";
+import AccordionText from "./AccordionText";
 
 export {
   Logo,
@@ -20,4 +21,5 @@ export {
   ProductCard,
   StoreCard,
   RateStars,
+  AccordionText,
 };

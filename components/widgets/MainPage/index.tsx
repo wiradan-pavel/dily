@@ -1,3 +1,4 @@
+import Accordion from "./Accordion";
 import BenefitBanners from "./BenefitBanners";
 import Carousel from "./Carousel";
 import GoodsActual from "./GoodsActual";
@@ -16,4 +17,5 @@ export {
   BenefitBanners,
   SelectionBanners,
   SellUsWrapper,
+  Accordion,
 };

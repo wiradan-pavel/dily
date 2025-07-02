@@ -1,4 +1,5 @@
 import {
+  Accordion,
   BenefitBanners,
   Carousel,
   GoodsActual,
@@ -23,6 +24,7 @@ const Main = () => {
       <SelectionBanners />
       <PopularStores />
       <SellUsWrapper />
+      <Accordion />
     </>
   );
 };
