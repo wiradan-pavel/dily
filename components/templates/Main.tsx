@@ -13,7 +13,7 @@ import { Looking, PopularStores } from "../widgets/Sections";
 
 const Main = () => {
   return (
-    <>
+    <main>
       <Carousel />
       <Looking />
       <GoodsForYou />
@@ -25,7 +25,7 @@ const Main = () => {
       <PopularStores />
       <SellUsWrapper />
       <Accordion />
-    </>
+    </main>
   );
 };
 
