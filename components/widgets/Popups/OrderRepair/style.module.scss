@@ -26,7 +26,7 @@
       row-gap: 20px;
 
       &__label {
-        @include mixins.flex(normal, flex-start, 5px);
+        @include mixins.flex(flex-start, flex-start, 5px);
         @include mixins.flex-direction-column();
         font-weight: 700;
         font-size: 14px;
@@ -61,10 +61,10 @@
     }
 
     &__send {
-      @include mixins.flex(normal, space-between, 10px);
+      @include mixins.flex(flex-start, space-between, 10px);
 
       &__checkbox {
-        @include mixins.flex(baseline, start, 10px);
+        @include mixins.flex(baseline, flex-start, 10px);
         font-size: 14px;
         font-weight: 400;
         max-width: 260px;

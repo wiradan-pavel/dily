@@ -48,7 +48,7 @@ const Carousel = () => {
               </span>
             </div>
             <Image
-              loading="eager"
+              priority
               alt="delivery image"
               src={deliveryImg}
               width={249}
@@ -73,7 +73,7 @@ const Carousel = () => {
               </span>
             </div>
             <Image
-              loading="eager"
+              priority
               alt="repair image"
               src={repairImg}
               width={isMediaSM ? 300 : 331}
@@ -98,7 +98,7 @@ const Carousel = () => {
               </span>
             </div>
             <Image
-              loading="eager"
+              priority
               alt="charity image"
               src={charityImg}
               width={250}
@@ -123,7 +123,7 @@ const Carousel = () => {
               </span>
             </div>
             <Image
-              loading="eager"
+              priority
               alt="sale us image"
               src={saleUsImg}
               width={250}

@@ -11,7 +11,7 @@
 
   &__link {
     height: 100%;
-    @include mixins.flex(start, flex-start, 8px);
+    @include mixins.flex(flex-start, flex-start, 8px);
     @include mixins.flex-direction-column();
   }
 
@@ -52,13 +52,13 @@
 
   &__img {
     width: 100%;
-    height: fit-content;
+    height: auto;
     border-radius: 8px 8px 0 0;
   }
 
   &__info {
     height: 100%;
-    @include mixins.flex(start, space-evenly, 4px);
+    @include mixins.flex(flex-start, space-evenly, 4px);
     @include mixins.flex-direction-column();
   }
 

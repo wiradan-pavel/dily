@@ -4,10 +4,10 @@
 .goods {
   &__top {
     padding: 80px 0 30px;
-    @include mixins.flex(end, space-between, 10px);
+    @include mixins.flex(flex-end, space-between, 10px);
 
     &__title {
-      @include mixins.flex(end, flex-start, 10px);
+      @include mixins.flex(flex-end, flex-start, 10px);
 
       &__green {
         color: var.$greenBright;

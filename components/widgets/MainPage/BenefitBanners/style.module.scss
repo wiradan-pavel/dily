@@ -15,7 +15,7 @@
   width: 850px;
   padding: 45px 40px 55px;
   border-radius: 10px;
-  @include mixins.flex(start, space-evenly, 25px);
+  @include mixins.flex(flex-start, space-evenly, 25px);
   @include mixins.flex-direction-column();
   @include mixins.box-shadow(
     1px 2px 16px 3px rgba($color: #363a45, $alpha: 0.08)
@@ -62,6 +62,7 @@
     border-radius: 0 10px 0 0;
     // media: 992 - 320 / width: 480 - 250
     width: clamp(15.625rem, 8.78rem + 34.23vw, 30rem);
+    height: auto;
 
     & ~ & {
       top: 0;
@@ -133,7 +134,7 @@
 
       & a {
         & div {
-          @include mixins.flex(start, space-evenly, 2px);
+          @include mixins.flex(flex-start, space-evenly, 2px);
           @include mixins.flex-direction-column();
 
           & h6,
