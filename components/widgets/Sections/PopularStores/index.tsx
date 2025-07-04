@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
@@ -13,9 +14,13 @@ import style from "./style.module.scss";
 const PopularStores = () => {
   const isMediaSM = useMediaQuery(576);
 
-  const popularStores: IItemStore[] = data
-    .sort((a, b) => b.subscribers - a.subscribers)
-    .slice(0, 5);
+  const [popularStores, setPopularStores] = useState<IItemStore[]>([]);
+
+  useEffect(() => {
+    setPopularStores(
+      data.sort((a, b) => b.subscribers - a.subscribers).slice(0, 7)
+    );
+  }, []);
 
   const [emblaRef] = useEmblaCarousel({ loop: true, startIndex: 1 }, [
     AutoScroll({ speed: 1, startDelay: 0 }),

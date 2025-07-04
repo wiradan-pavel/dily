@@ -23,7 +23,6 @@ const Carousel = () => {
     {
       loop: true,
       startIndex: 1,
-      align: () => 50,
     },
     [AutoScroll({ speed: 1, startDelay: 0 })]
   );

@@ -15,6 +15,7 @@ import style from "./style.module.scss";
 
 const BenefitBanners = () => {
   const isMediaLG = useMediaQuery(992);
+  const isMediaMD = useMediaQuery(768);
   const dataBest = data.banners["best-offers"];
   const dataDiscount = data.banners["discount-of-the-day"];
 
@@ -44,23 +45,25 @@ const BenefitBanners = () => {
               paddingY="12px"
             />
           </Link>
-          <Image
-            className={style.best__img}
-            src={bestOffersImg}
-            alt={dataBest.title}
-          />
-          <Image className={style.best__img} src={bestOffersBgImg} alt="" />
+          {!isMediaMD && (
+            <Image
+              className={style.best__img}
+              src={bestOffersImg}
+              alt={dataBest.title}
+            />
+          )}
+          <Image className={style.best__img__bg} src={bestOffersBgImg} alt="" />
         </div>
         {!isMediaLG && (
           <div className={style.discount}>
             <h6 className={style.discount__title}>{dataDiscount.title}</h6>
             <ul className={style.discount__card}>
-              <div className={style.discount__card__procent}>
+              <li className={style.discount__card__procent}>
                 <p>
                   {Math.round(percent)}
                   <span>%</span>
                 </p>
-              </div>
+              </li>
               <ProductCard item={discountProduct[0]} />
             </ul>
             <Link href={dataDiscount.btn.href}>
