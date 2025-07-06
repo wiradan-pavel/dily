@@ -65,7 +65,7 @@ const Looking = () => {
               <li className={styles.looking__list__item} key={item.id}>
                 <Link href={item.href}>
                   <span>
-                    <Image alt={item.title} src={arrayImg[item.id - 1]} />
+                    <Image alt={item.alt} src={arrayImg[item.id - 1]} />
                   </span>
                   {item.title}
                 </Link>

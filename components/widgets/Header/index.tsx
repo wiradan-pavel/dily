@@ -115,7 +115,7 @@ const Header = () => {
               </div>
             )}
             <div className={styles.main__actions__auth}>
-              <button className={styles.main__actions__auth__btn}>
+              <button className={styles.main__actions__auth__btn} title="login">
                 <PersonSvg />
                 {!isMediaLG && "Вход / регистрация"}
               </button>

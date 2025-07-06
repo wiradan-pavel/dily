@@ -94,7 +94,7 @@ const BulletinNav = () => {
           paddingY="6px"
           borderRadius={18}
         >
-          <Link href="/" />
+          <Link href="#" />
           {!isMediaSM && <AddSvg />}
         </Button>
       </div>

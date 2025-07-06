@@ -56,6 +56,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
     <button
       className={`${styles.looking__btn} ${styles.looking__btn__prev}`}
       type="button"
+      title="previous"
       {...restProps}
     >
       <ArrowLeftBgGreenSvg />
@@ -71,6 +72,7 @@ export const NextButton: React.FC<PropType> = (props) => {
     <button
       className={`${styles.looking__btn} ${styles.looking__btn__next}`}
       type="button"
+      title="next"
       {...restProps}
     >
       <ArrowLeftBgGreenSvg />

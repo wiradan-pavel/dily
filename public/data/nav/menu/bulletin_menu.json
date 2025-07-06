@@ -3,76 +3,91 @@
     {
       "id": 1,
       "title": "Личные вещи",
+      "alt": "personal",
       "href": ""
     },
     {
       "id": 2,
       "title": "Телефоны и аксессуары",
+      "alt": "phones",
       "href": ""
     },
     {
       "id": 3,
       "title": "Электроника",
+      "alt": "electronic",
       "href": ""
     },
     {
       "id": 4,
       "title": "Бытовая техника",
+      "alt": "tech",
       "href": ""
     },
     {
       "id": 5,
       "title": "Дом и сад",
+      "alt": "garden",
       "href": ""
     },
     {
       "id": 6,
       "title": "Товары для детей",
+      "alt": "child",
       "href": ""
     },
     {
       "id": 7,
       "title": "Животные",
+      "alt": "animals",
       "href": ""
     },
     {
       "id": 8,
       "title": "Хобби и отдых",
+      "alt": "hobbies",
       "href": ""
     },
     {
       "id": 9,
       "title": "Транспорт",
+      "alt": "transport",
       "href": ""
     },
     {
       "id": 10,
       "title": "Автотовары",
+      "alt": "auto",
       "href": ""
     },
     {
       "id": 11,
       "title": "Недвижимость",
+      "alt": "estate",
       "href": ""
     },
     {
       "id": 12,
       "title": "Работа",
+      "alt": "job",
       "href": ""
     },
     {
       "id": 13,
       "title": "Услуги",
+      "alt": "services",
       "href": ""
     },
     {
       "id": 14,
       "title": "Для бизнеса",
+      "alt": "bussiness",
       "href": ""
     },
     {
       "id": 15,
       "title": "Отдам даром",
+      "alt": "free",
       "href": ""
     }
   ]
