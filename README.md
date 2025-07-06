@@ -1,1 +1,1 @@
-(./index.jpg)
+<img src="./index.jpg" alt="Index" />
