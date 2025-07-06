@@ -108,7 +108,9 @@
 
       &__active span {
         &:first-child {
-          @include mixins.transform(rotate(45deg) translateY(5) translateX(5));
+          @include mixins.transform(rotate(45deg));
+
+          //  translateY(5) translateX(5)
         }
 
         &:nth-child(2) {

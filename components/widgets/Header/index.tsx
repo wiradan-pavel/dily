@@ -11,10 +11,11 @@ import ServiceCenterNav from "./ServiceCenterNav";
 import InternetStoreNav from "./InternetStoreNav";
 import PurchaseNav from "./PurchaseNav";
 
+import MobileBurgerMenu from "./MobileBurgerMenu";
+
 import menuData from "@/public/data/nav/header/header.json";
 
 import styles from "./style.module.scss";
-import MobileBurgerMenu from "./MobileBurgerMenu";
 
 const Header = () => {
   const [activeMenuLink, setActiveMenuLink] = useState<0 | 1 | 2 | 3>(0);
