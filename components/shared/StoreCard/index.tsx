@@ -12,7 +12,16 @@ const StoreCard = ({ item }: { item: IItemStore }) => {
       <Link
         className={`${style.item__link} ${
           item.styles.bgColor === "orange" && style.item__link__orange
-        }`}
+        }
+          ${item.styles.bgColor === "red" && style.item__link__red} ${
+          item.styles.bgColor === "white" && style.item__link__white
+        } ${item.styles.bgColor === "blue" && style.item__link__blue} ${
+          item.styles.bgColor === "yellow" && style.item__link__yellow
+        } ${item.styles.bgColor === "green" && style.item__link__green} ${
+          item.styles.bgColor === "grey" && style.item__link__grey
+        } 
+          ${item.styles.bgColor === "turquoise" && style.item__link__turquoise}
+        `}
         href="#"
       >
         <div className={style.item__top}>
@@ -24,7 +33,12 @@ const StoreCard = ({ item }: { item: IItemStore }) => {
           />
           <p
             className={`${style.item__top__name} ${
-              style.item__top__name + "__" + item.styles.textColor
+              item.styles.textColor === "white" && style.item__top__name__white
+            } ${
+              item.styles.textColor === "black" && style.item__top__name__black
+            } ${
+              item.styles.textColor === "orange" &&
+              style.item__top__name__orange
             }`}
           >
             {item.name}
@@ -32,8 +46,8 @@ const StoreCard = ({ item }: { item: IItemStore }) => {
         </div>
         <div
           className={`${style.item__bottom} ${
-            style.item__bottom + "__" + item.styles.styleBtns
-          }`}
+            item.styles.styleBtns === "white" && style.item__bottom__white
+          } ${item.styles.styleBtns === "green" && style.item__bottom__green}`}
         >
           <div className={style.item__bottom__rate}>
             {item.rate}
