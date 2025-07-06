@@ -19,8 +19,6 @@ const BulletinNav = () => {
   const [activeBulletinPage, setActiveBulletinPage] = useState<0 | 1 | 2>(0);
   const [openMenu, setOpenMenu] = useState(false);
 
-  const isMediaXL = useMediaQuery(1200);
-  const isMediaMD = useMediaQuery(768);
   const isMediaSM = useMediaQuery(576);
 
   return (
@@ -65,28 +63,26 @@ const BulletinNav = () => {
               </Link>
             </li>
           )}
-          {!isMediaMD && (
-            <li
-              className={`${styles.bulletin__list__item} ${
-                activeBulletinPage === 2
-                  ? styles.bulletin__list__item__active
-                  : ""
-              }`}
+          <li
+            className={`${styles.bulletin__list__item} ${
+              activeBulletinPage === 2
+                ? styles.bulletin__list__item__active
+                : ""
+            }`}
+          >
+            <Link
+              onClick={() => setActiveBulletinPage(2)}
+              href={bulletinBoardData.charity.href}
+              className={styles.bulletin__list__item__link}
             >
-              <Link
-                onClick={() => setActiveBulletinPage(2)}
-                href={bulletinBoardData.charity.href}
-                className={styles.bulletin__list__item__link}
-              >
-                <BulletinNavCharitySvg />
-                {bulletinBoardData.charity.title}
-              </Link>
-            </li>
-          )}
+              <BulletinNavCharitySvg />
+              {bulletinBoardData.charity.title}
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className={styles.bulletin__actions}>
-        {!isMediaXL && <SearchForm />}
+        <SearchForm />
         <Button
           text="Подать объявление"
           style="green"

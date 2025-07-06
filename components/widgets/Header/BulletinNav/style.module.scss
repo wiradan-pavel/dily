@@ -66,7 +66,12 @@
           }
         }
       }
-      // svgs end
+
+      &:last-child {
+        @media (max-width: var.$md) {
+          display: none;
+        }
+      }
     }
 
     @media (max-width: var.$lg) {
@@ -80,5 +85,11 @@
 
   &__actions {
     @include mixins.flex(center, flex-start, 70px);
+
+    & form {
+      @media (max-width: var.$xl) {
+        display: none;
+      }
+    }
   }
 }
